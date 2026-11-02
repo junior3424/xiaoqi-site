@@ -1,0 +1,9 @@
+# 内部文档：不随仓库发布（含 NAS 路径 / SMB 配置 / 任务账本信息）
+HANDOFF.md
+_MANIFEST.md
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp

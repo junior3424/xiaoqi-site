@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>配色方向 — 8 个方案 / YAN</title>
+<meta name="description" content="个人网站配色方向对照：同一套版式，八种颜色。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   配色对照页 —— 只用来选色，不是网站本身
+   ============================================================ */
+:root{
+  --page:   #E9E8E2;
+  --card:   #FBFAF6;
+  --edge:   #D6D3C9;
+  --text:   #17150F;
+  --muted:  rgba(23,21,15,.55);
+  --f-d:    "Jost","Noto Sans SC","PingFang SC",system-ui,sans-serif;
+  --f-b:    "Noto Sans SC","Jost","PingFang SC",system-ui,sans-serif;
+  --f-m:    "IBM Plex Mono",Consolas,monospace;
+  --ease:   cubic-bezier(.2,.75,.2,1);
+}
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--page); color:var(--text);
+  font-family:var(--f-b); font-size:15px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; text-decoration:none; }
+::selection{ background:#D3E24B; color:#16150F; }
+:focus-visible{ outline:2px solid #1E2E70; outline-offset:3px; }
+
+.wrap{ max-width:1420px; margin:0 auto; padding:0 clamp(18px,3.6vw,56px); }
+
+/* ---------- 页头 ---------- */
+.head{ padding:clamp(28px,4vw,56px) 0 clamp(26px,3vw,40px); border-bottom:1px solid var(--edge); }
+.head__row{ display:flex; align-items:center; gap:12px; margin-bottom:clamp(26px,4vw,52px); }
+.mark{ width:14px; height:14px; background:var(--text); }
+.head__kicker{ font-family:var(--f-m); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; }
+.head__back{
+  margin-left:auto; font-family:var(--f-m); font-size:11px;
+  border-bottom:1px solid var(--edge); padding-bottom:2px;
+}
+.head__back:hover{ border-color:var(--text); }
+
+.head h1{
+  margin:0 0 14px;
+  font-family:var(--f-d); font-weight:800;
+  font-size:clamp(2.2rem,5.2vw,4.4rem);
+  line-height:1.02; letter-spacing:.01em;
+}
+.head h1 span{
+  display:block;
+  font-family:var(--f-m); font-weight:400;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--muted); margin-top:12px;
+}
+.head__lede{ margin:0; max-width:58ch; font-size:14px; line-height:1.9; color:rgba(23,21,15,.72); }
+.head__hint{
+  display:inline-flex; align-items:center; gap:8px;
+  margin-top:18px; font-family:var(--f-m); font-size:10.5px; letter-spacing:.06em;
+  color:var(--muted);
+}
+.head__hint i{ width:8px; height:8px; background:#E2402A; display:block; }
+
+.pal-index{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.pal-index a{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--f-m); font-size:10px; letter-spacing:.1em;
+  border:1px solid var(--edge); background:var(--card);
+  padding:5px 9px;
+  transition:border-color .2s var(--ease), transform .2s var(--ease);
+}
+.pal-index a:hover{ border-color:var(--text); transform:translateY(-1px); }
+.pal-index i{ width:9px; height:9px; display:block; }
+
+/* ---------- 网格 ---------- */
+.grid{
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:clamp(18px,2.4vw,34px);
+  padding:clamp(26px,3.6vw,52px) 0 0;
+}
+
+/* ---------- 卡片 ---------- */
+.pal{
+  background:var(--card);
+  border:1px solid var(--edge);
+  padding:clamp(12px,1.4vw,18px);
+  display:flex; flex-direction:column; gap:14px;
+}
+
+.pal__head{ display:flex; align-items:baseline; gap:10px; }
+.pal__no{
+  font-family:var(--f-m); font-size:10px; color:var(--muted);
+}
+.pal__head h2{
+  margin:0; font-family:var(--f-d); font-weight:700;
+  font-size:clamp(15px,1.4vw,18px); line-height:1.3;
+}
+.pal--picked{ border:2px solid var(--text); padding:calc(clamp(12px,1.4vw,18px) - 1px); }
+.pal__badge{
+  margin-left:auto; align-self:center;
+  font-family:var(--f-m); font-size:9px; letter-spacing:.12em;
+  border:1px solid var(--text); padding:3px 7px;
+  white-space:nowrap;
+}
+.pal__head h2 span{
+  font-family:var(--f-m); font-weight:400; font-size:9.5px;
+  letter-spacing:.14em; color:var(--muted); margin-left:6px;
+}
+
+/* ---------- 缩略示意 ---------- */
+.mini{
+  background:var(--p); color:var(--k);
+  display:grid; grid-template-columns:1.15fr .85fr;
+  gap:10px; padding:clamp(12px,1.4vw,18px);
+  min-height:230px; overflow:hidden; position:relative;
+}
+.mini__copy{ display:flex; flex-direction:column; min-width:0; }
+.mini__eyebrow{
+  display:flex; align-items:center; gap:6px;
+  font-family:var(--f-m); font-size:8px; letter-spacing:.18em;
+  text-transform:uppercase; opacity:.7;
+}
+.mini__eyebrow::before{
+  content:""; width:6px; height:6px; background:var(--a); flex:0 0 auto;
+}
+.mini__title{
+  margin:auto 0;
+  font-family:var(--f-d); font-weight:800;
+  font-size:clamp(26px,3.1vw,42px); line-height:1.02;
+  letter-spacing:.01em;
+}
+.mini__title em{ font-style:normal; color:var(--a); }
+.mini__ui{ display:flex; gap:6px; flex-wrap:wrap; }
+.chip{
+  font-family:var(--f-m); font-size:8.5px; letter-spacing:.04em;
+  padding:5px 9px; background:var(--k); color:var(--p);
+  border:1px solid var(--k);
+}
+.chip--ghost{ background:transparent; color:var(--k); }
+
+.mini__art{ position:relative; }
+.mini__art i{ position:absolute; display:block; }
+.s-sq{
+  width:58%; aspect-ratio:1; background:var(--k);
+  left:2%; top:20%; transform:rotate(-6deg);
+}
+.s-ci{
+  width:47%; aspect-ratio:1; border-radius:50%;
+  background:var(--a); right:0; top:3%;
+}
+.s-bar{
+  width:72%; height:8%; background:var(--b);
+  left:12%; bottom:30%; transform:rotate(-32deg);
+}
+.s-line{
+  width:130%; height:1px; background:var(--k); opacity:.4;
+  left:-14%; top:56%; transform:rotate(-34deg);
+}
+
+/* 黑底区（对应网站的“感兴趣的东西”那一屏） */
+.strip{
+  background:var(--k); color:var(--p);
+  display:flex; align-items:center; gap:10px;
+  padding:0 14px; height:42px;
+  font-family:var(--f-m); font-size:9.5px; letter-spacing:.14em;
+}
+.strip i{ width:7px; height:7px; background:var(--a); display:block; flex:0 0 auto; }
+.strip b{ margin-left:auto; font-weight:400; opacity:.55; font-size:8.5px; }
+
+.pal__desc{ margin:0; font-size:12.5px; line-height:1.8; color:rgba(23,21,15,.72); }
+
+/* ---------- 色块 ---------- */
+.sw{
+  list-style:none; margin:auto 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+}
+.sw__item{
+  all:unset; cursor:pointer; display:block;
+  border:1px solid rgba(23,21,15,.1);
+  transition:transform .2s var(--ease), border-color .2s;
+}
+.sw__item:hover{ transform:translateY(-2px); border-color:rgba(23,21,15,.45); }
+.sw__item:focus-visible{ outline:2px solid #1E2E70; outline-offset:2px; }
+.sw__chip{ display:block; height:44px; background:var(--c); }
+.sw__meta{ display:block; padding:6px 7px 7px; background:var(--card); }
+.sw__meta b{
+  display:block; font-weight:500; font-size:10.5px;
+  font-family:var(--f-b);
+}
+.sw__meta em{
+  display:block; font-style:normal;
+  font-family:var(--f-m); font-size:9px; letter-spacing:.02em;
+  color:var(--muted);
+  text-transform:uppercase; margin-top:1px;
+}
+
+/* 面积占比 */
+.ratio{ display:flex; height:5px; margin-top:2px; }
+.ratio i{ display:block; }
+
+/* ---------- 说明区 ---------- */
+.notes{
+  margin-top:clamp(36px,5vw,72px);
+  padding:clamp(24px,3vw,40px) 0;
+  border-top:2px solid var(--text);
+  display:grid; grid-template-columns:1fr 1.4fr; gap:clamp(20px,4vw,64px);
+}
+.notes h3{
+  margin:0; font-family:var(--f-d); font-weight:700;
+  font-size:clamp(1.1rem,1.8vw,1.5rem); line-height:1.3;
+}
+.notes h3 span{
+  display:block; font-family:var(--f-m); font-size:9.5px; font-weight:400;
+  letter-spacing:.18em; color:var(--muted); margin-top:8px;
+}
+.notes ol{ margin:0; padding:0; list-style:none; counter-reset:n; }
+.notes li{
+  counter-increment:n;
+  padding:0 0 12px 30px; position:relative;
+  font-size:13px; line-height:1.85; color:rgba(23,21,15,.78);
+}
+.notes li::before{
+  content:counter(n,decimal-leading-zero);
+  position:absolute; left:0; top:2px;
+  font-family:var(--f-m); font-size:10px; color:var(--muted);
+}
+.notes li b{ color:var(--text); font-weight:500; }
+
+footer{
+  border-top:1px solid var(--edge);
+  padding:20px 0 40px;
+  display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
+  font-family:var(--f-m); font-size:10px; letter-spacing:.06em;
+  color:var(--muted);
+}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed; left:50%; bottom:26px; transform:translate(-50%,20px);
+  background:#17150F; color:#F2EDE3;
+  font-family:var(--f-m); font-size:11px; letter-spacing:.06em;
+  padding:10px 16px; opacity:0; pointer-events:none;
+  transition:opacity .25s var(--ease), transform .25s var(--ease);
+  z-index:99;
+}
+.toast.is-on{ opacity:1; transform:translate(-50%,0); }
+
+/* ---------- 响应式 ---------- */
+@media (max-width:900px){
+  .grid{ grid-template-columns:1fr; }
+  .mini{ min-height:200px; }
+  .notes{ grid-template-columns:1fr; }
+}
+@media (max-width:520px){
+  .mini{ grid-template-columns:1fr .8fr; }
+  .sw__chip{ height:36px; }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ transition-duration:.001ms !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="head">
+    <div class="head__row">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="head__kicker">YAN — PALETTE STUDIES</span>
+      <a class="head__back" href="index.html">← 回到网站</a>
+    </div>
+
+    <h1>配色方向<span>8 PALETTES — ONE LAYOUT</span></h1>
+    <p class="head__lede">版式、字号、网格、动效都不动，只换四支颜色。每一格里的小图就是首页的缩略版，下面那条深色带是“感兴趣的东西”那一屏。看哪组最像你，把编号告诉我，我再改到网站上。</p>
+    <nav class="pal-index" aria-label="配色索引">
+      <a href="#p1"><i style="background:#E2402A" aria-hidden="true"></i>01 朱砂</a>
+      <a href="#p2"><i style="background:#B5503A" aria-hidden="true"></i>02 陶土</a>
+      <a href="#p3"><i style="background:#D3E24B" aria-hidden="true"></i>03 酸报纸</a>
+      <a href="#p4"><i style="background:#1E2E70" aria-hidden="true"></i>04 靛与苔</a>
+      <a href="#p5"><i style="background:#1F6F63" aria-hidden="true"></i>05 雾青</a>
+      <a href="#p6"><i style="background:#D8A03F" aria-hidden="true"></i>06 砖与奶油</a>
+      <a href="#p7"><i style="background:#F2561D" aria-hidden="true"></i>07 安全橙</a>
+      <a href="#p8"><i style="background:#9FE8C3" aria-hidden="true"></i>08 煤与薄荷</a>
+    </nav>
+    <p class="head__hint"><i aria-hidden="true"></i>点任意色块可复制色值</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- 01 -->
+    <article class="pal" id="p1" style="--p:#F2EDE3;--k:#17130F;--a:#E2402A;--b:#C8BFAE">
+      <div class="pal__head">
+        <span class="pal__no">01</span>
+        <h2>单色朱砂<span>ONE VERMILION</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">把蓝和黄全部拿掉，只留一个红。最像“一张海报”的方案——个性全靠版式和字重撑，颜色不抢戏。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#F2EDE3" style="--c:#F2EDE3"><span class="sw__chip"></span><span class="sw__meta"><b>纸</b><em>F2EDE3</em></span></button></li>
+        <li><button class="sw__item" data-hex="#17130F" style="--c:#17130F"><span class="sw__chip"></span><span class="sw__meta"><b>墨</b><em>17130F</em></span></button></li>
+        <li><button class="sw__item" data-hex="#E2402A" style="--c:#E2402A"><span class="sw__chip"></span><span class="sw__meta"><b>朱砂</b><em>E2402A</em></span></button></li>
+        <li><button class="sw__item" data-hex="#C8BFAE" style="--c:#C8BFAE"><span class="sw__chip"></span><span class="sw__meta"><b>灰陶</b><em>C8BFAE</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:64%;background:#F2EDE3"></i><i style="width:26%;background:#17130F"></i><i style="width:10%;background:#E2402A"></i>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="pal" id="p2" style="--p:#E6E1D6;--k:#1D1B18;--a:#B5503A;--b:#7D8B78">
+      <div class="pal__head">
+        <span class="pal__no">02</span>
+        <h2>铅与陶土<span>LEAD &amp; CLAY</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">混凝土、陶土、晒褪的军绿。都是低饱和的“材料色”，放作品图不打架，适合照片本身颜色就多的人。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#E6E1D6" style="--c:#E6E1D6"><span class="sw__chip"></span><span class="sw__meta"><b>灰纸</b><em>E6E1D6</em></span></button></li>
+        <li><button class="sw__item" data-hex="#1D1B18" style="--c:#1D1B18"><span class="sw__chip"></span><span class="sw__meta"><b>铅</b><em>1D1B18</em></span></button></li>
+        <li><button class="sw__item" data-hex="#B5503A" style="--c:#B5503A"><span class="sw__chip"></span><span class="sw__meta"><b>陶土</b><em>B5503A</em></span></button></li>
+        <li><button class="sw__item" data-hex="#7D8B78" style="--c:#7D8B78"><span class="sw__chip"></span><span class="sw__meta"><b>灰绿</b><em>7D8B78</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:62%;background:#E6E1D6"></i><i style="width:24%;background:#1D1B18"></i><i style="width:8%;background:#B5503A"></i><i style="width:6%;background:#7D8B78"></i>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="pal" id="p3" style="--p:#E8E3D5;--k:#16150F;--a:#8A3A2C;--b:#D3E24B">
+      <div class="pal__head">
+        <span class="pal__no">03</span>
+        <h2>酸报纸<span>ACID NEWSPRINT</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">新闻纸、铁锈红，再压一条荧光黄绿。像从旧纸堆里翻出来的印刷品，但有一处是通电的。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#E8E3D5" style="--c:#E8E3D5"><span class="sw__chip"></span><span class="sw__meta"><b>新闻纸</b><em>E8E3D5</em></span></button></li>
+        <li><button class="sw__item" data-hex="#16150F" style="--c:#16150F"><span class="sw__chip"></span><span class="sw__meta"><b>墨</b><em>16150F</em></span></button></li>
+        <li><button class="sw__item" data-hex="#8A3A2C" style="--c:#8A3A2C"><span class="sw__chip"></span><span class="sw__meta"><b>铁锈</b><em>8A3A2C</em></span></button></li>
+        <li><button class="sw__item" data-hex="#D3E24B" style="--c:#D3E24B"><span class="sw__chip"></span><span class="sw__meta"><b>酸绿</b><em>D3E24B</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:60%;background:#E8E3D5"></i><i style="width:24%;background:#16150F"></i><i style="width:10%;background:#8A3A2C"></i><i style="width:6%;background:#D3E24B"></i>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="pal" id="p4" style="--p:#E9EAE3;--k:#0C1224;--a:#1E2E70;--b:#C3D44E">
+      <div class="pal__head">
+        <span class="pal__no">04</span>
+        <h2>午夜靛与苔<span>INDIGO &amp; MOSS</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">用深靛蓝代替纯黑，配一点苔绿。整体偏冷偏沉，但那条绿会让画面忽然活一下——很“夜里工作”的颜色。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#E9EAE3" style="--c:#E9EAE3"><span class="sw__chip"></span><span class="sw__meta"><b>纸</b><em>E9EAE3</em></span></button></li>
+        <li><button class="sw__item" data-hex="#0C1224" style="--c:#0C1224"><span class="sw__chip"></span><span class="sw__meta"><b>靛黑</b><em>0C1224</em></span></button></li>
+        <li><button class="sw__item" data-hex="#1E2E70" style="--c:#1E2E70"><span class="sw__chip"></span><span class="sw__meta"><b>靛蓝</b><em>1E2E70</em></span></button></li>
+        <li><button class="sw__item" data-hex="#C3D44E" style="--c:#C3D44E"><span class="sw__chip"></span><span class="sw__meta"><b>苔</b><em>C3D44E</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:62%;background:#E9EAE3"></i><i style="width:25%;background:#0C1224"></i><i style="width:8%;background:#1E2E70"></i><i style="width:5%;background:#C3D44E"></i>
+      </div>
+    </article>
+
+    <!-- 05 -->
+    <article class="pal pal--picked" id="p5" style="--p:#E3EBE7;--k:#12241F;--a:#F07A5E;--b:#1F6F63">
+      <div class="pal__head">
+        <span class="pal__no">05</span>
+        <h2>雾青与珊瑚<span>HAZE &amp; CORAL</span></h2>
+        <span class="pal__badge">已应用</span>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">雾面青绿当底，深墨绿当字，珊瑚橙只出现在需要被看见的地方。柔和，但仍然是干净的平涂。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#E3EBE7" style="--c:#E3EBE7"><span class="sw__chip"></span><span class="sw__meta"><b>雾青</b><em>E3EBE7</em></span></button></li>
+        <li><button class="sw__item" data-hex="#12241F" style="--c:#12241F"><span class="sw__chip"></span><span class="sw__meta"><b>墨绿</b><em>12241F</em></span></button></li>
+        <li><button class="sw__item" data-hex="#1F6F63" style="--c:#1F6F63"><span class="sw__chip"></span><span class="sw__meta"><b>青</b><em>1F6F63</em></span></button></li>
+        <li><button class="sw__item" data-hex="#F07A5E" style="--c:#F07A5E"><span class="sw__chip"></span><span class="sw__meta"><b>珊瑚</b><em>F07A5E</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:64%;background:#E3EBE7"></i><i style="width:22%;background:#12241F"></i><i style="width:9%;background:#1F6F63"></i><i style="width:5%;background:#F07A5E"></i>
+      </div>
+    </article>
+
+    <!-- 06 -->
+    <article class="pal" id="p6" style="--p:#F3E8D3;--k:#231A15;--a:#6E2433;--b:#D8A03F">
+      <div class="pal__head">
+        <span class="pal__no">06</span>
+        <h2>砖与奶油<span>BRICK &amp; CREAM</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">奶油色纸、牛血红、旧金色。像三十年代的画册，暖、旧、有点书卷气——离“包豪斯三原色”最远的一组。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#F3E8D3" style="--c:#F3E8D3"><span class="sw__chip"></span><span class="sw__meta"><b>奶油</b><em>F3E8D3</em></span></button></li>
+        <li><button class="sw__item" data-hex="#231A15" style="--c:#231A15"><span class="sw__chip"></span><span class="sw__meta"><b>焦墨</b><em>231A15</em></span></button></li>
+        <li><button class="sw__item" data-hex="#6E2433" style="--c:#6E2433"><span class="sw__chip"></span><span class="sw__meta"><b>牛血</b><em>6E2433</em></span></button></li>
+        <li><button class="sw__item" data-hex="#D8A03F" style="--c:#D8A03F"><span class="sw__chip"></span><span class="sw__meta"><b>旧金</b><em>D8A03F</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:62%;background:#F3E8D3"></i><i style="width:23%;background:#231A15"></i><i style="width:10%;background:#6E2433"></i><i style="width:5%;background:#D8A03F"></i>
+      </div>
+    </article>
+
+    <!-- 07 -->
+    <article class="pal" id="p7" style="--p:#E4E3DE;--k:#121212;--a:#F2561D;--b:#59666E">
+      <div class="pal__head">
+        <span class="pal__no">07</span>
+        <h2>水泥与安全橙<span>CONCRETE &amp; SAFETY</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">工地的颜色。灰水泥、纯黑、一条安全橙。最硬的一组，适合想让人记住“这个人做东西很直接”。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#E4E3DE" style="--c:#E4E3DE"><span class="sw__chip"></span><span class="sw__meta"><b>水泥</b><em>E4E3DE</em></span></button></li>
+        <li><button class="sw__item" data-hex="#121212" style="--c:#121212"><span class="sw__chip"></span><span class="sw__meta"><b>黑</b><em>121212</em></span></button></li>
+        <li><button class="sw__item" data-hex="#F2561D" style="--c:#F2561D"><span class="sw__chip"></span><span class="sw__meta"><b>安全橙</b><em>F2561D</em></span></button></li>
+        <li><button class="sw__item" data-hex="#59666E" style="--c:#59666E"><span class="sw__chip"></span><span class="sw__meta"><b>钢灰</b><em>59666E</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:60%;background:#E4E3DE"></i><i style="width:27%;background:#121212"></i><i style="width:9%;background:#F2561D"></i><i style="width:4%;background:#59666E"></i>
+      </div>
+    </article>
+
+    <!-- 08 -->
+    <article class="pal" id="p8" style="--p:#141513;--k:#ECECE2;--a:#9FE8C3;--b:#E2C044">
+      <div class="pal__head">
+        <span class="pal__no">08</span>
+        <h2>煤与薄荷<span>COAL &amp; MINT — 暗色</span></h2>
+      </div>
+      <div class="mini">
+        <div class="mini__copy">
+          <span class="mini__eyebrow">Portfolio Nº1</span>
+          <p class="mini__title">用几何<br><em>整理世界</em></p>
+          <div class="mini__ui"><span class="chip">看看作品</span><span class="chip chip--ghost">关于我</span></div>
+        </div>
+        <div class="mini__art" aria-hidden="true"><i class="s-sq"></i><i class="s-ci"></i><i class="s-bar"></i><i class="s-line"></i></div>
+      </div>
+      <div class="strip"><i aria-hidden="true"></i>感兴趣的东西<b>THINGS I LIKE</b></div>
+      <p class="pal__desc">把明暗倒过来：黑纸白字，薄荷绿当主角。作品图会显得更亮更靠前，晚上看也舒服——代价是纸感没了。</p>
+      <ul class="sw">
+        <li><button class="sw__item" data-hex="#141513" style="--c:#141513"><span class="sw__chip"></span><span class="sw__meta"><b>煤</b><em>141513</em></span></button></li>
+        <li><button class="sw__item" data-hex="#ECECE2" style="--c:#ECECE2"><span class="sw__chip"></span><span class="sw__meta"><b>骨白</b><em>ECECE2</em></span></button></li>
+        <li><button class="sw__item" data-hex="#9FE8C3" style="--c:#9FE8C3"><span class="sw__chip"></span><span class="sw__meta"><b>薄荷</b><em>9FE8C3</em></span></button></li>
+        <li><button class="sw__item" data-hex="#E2C044" style="--c:#E2C044"><span class="sw__chip"></span><span class="sw__meta"><b>芥黄</b><em>E2C044</em></span></button></li>
+      </ul>
+      <div class="ratio" aria-hidden="true">
+        <i style="width:66%;background:#141513"></i><i style="width:22%;background:#ECECE2"></i><i style="width:8%;background:#9FE8C3"></i><i style="width:4%;background:#E2C044"></i>
+      </div>
+    </article>
+
+  </main>
+
+  <section class="notes">
+    <h3>自己调的时候，守住这几条<span>RULES OF THUMB</span></h3>
+    <ol>
+      <li><b>纸和墨必须先定。</b>纸不用纯白（#FFFFFF 太刺眼），墨不用纯黑（#000000 太硬）。稍微偏一点色相，整页立刻“有纸感”。</li>
+      <li><b>只留一个高饱和。</b>第二支颜色要降饱和去当支撑（比如灰绿、钢灰、灰陶），否则两块都在喊，画面就吵。</li>
+      <li><b>面积比大致 6 : 2.5 : 1。</b>纸最多、墨其次、彩色只做“标点符号”。想更凶就把墨提到 3。</li>
+      <li><b>暗色方案要先测作品图。</b>黑底会让截图发灰，如果作品多是浅色 UI，建议还是走纸白。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>配色方向 v1 · 2026</span>
+    <span>版式未改动 — 选好编号我再落到网站上</span>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const toast = document.getElementById('toast');
+  let timer = 0;
+
+  const show = (msg) => {
+    toast.textContent = msg;
+    toast.classList.add('is-on');
+    clearTimeout(timer);
+    timer = setTimeout(() => toast.classList.remove('is-on'), 1600);
+  };
+
+  document.querySelectorAll('.sw__item').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const hex = btn.dataset.hex;
+      try {
+        await navigator.clipboard.writeText(hex);
+        show('已复制 ' + hex);
+      } catch (e) {
+        show(hex);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
