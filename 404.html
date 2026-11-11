@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>404 — 小七</title>
+<meta name="description" content="这个地址上什么都没有。">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E3EBE7">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E3EBE7'/%3E%3Crect x='6' y='6' width='14' height='14' fill='%2312241F'/%3E%3Ccircle cx='23' cy='21' r='5' fill='%23F07A5E'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .nf-wrap{
+    min-height:100svh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:clamp(28px,7vw,96px) var(--pad);
+    max-width:var(--max); margin:0 auto;
+  }
+  .nf-mark{ display:flex; align-items:center; gap:12px; margin-bottom:clamp(20px,4vw,40px); }
+  .nf-mark__sq{ width:22px; height:22px; background:var(--ink); }
+  .nf-mark__bar{ width:88px; height:10px; background:var(--sage); }
+  .nf-eyebrow{
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 14px;
+  }
+  .nf-title{
+    font-family:var(--f-display); font-weight:800;
+    font-size:clamp(4.4rem,22vw,13rem); line-height:.86; letter-spacing:-.04em;
+    margin:0; color:var(--ink);
+  }
+  .nf-title em{ font-style:normal; color:#DE5C3D; }  /* 大字对比度 3.03:1（--coral 只有 2.26） */
+  .nf-lede{
+    max-width:46ch; margin:clamp(18px,3vw,30px) 0 0;
+    font-size:clamp(15px,1.6vw,18px); line-height:1.65; color:var(--ink-80);
+  }
+  .nf-rule{ height:1px; background:var(--line); margin:clamp(28px,4vw,44px) 0 clamp(20px,3vw,28px); }
+  .nf-actions{ display:flex; flex-wrap:wrap; gap:12px; }
+  .nf-foot{
+    margin-top:clamp(36px,6vw,72px);
+    font-family:var(--f-mono); font-size:11px; letter-spacing:.12em;
+    color:var(--muted);
+  }
+  .nf-foot a{ color:var(--muted); text-decoration:underline; text-underline-offset:4px; }
+  /* 覆盖 style.css 里 left:-9999px 的 skip：那会造成左侧溢出 */
+  .skip{ left:0; top:0; transform:translateY(-130%); }
+  .skip:focus{ transform:none; }
+  /* 页脚邮箱：补足 44px 可点高度 */
+  .nf-foot a{ display:inline-flex; align-items:center; min-height:44px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<main class="nf-wrap" id="main">
+  <div class="nf-mark" aria-hidden="true">
+    <span class="nf-mark__sq"></span>
+    <span class="nf-mark__bar"></span>
+  </div>
+
+  <p class="nf-eyebrow">Error · 找不到</p>
+  <h1 class="nf-title">4<em>0</em>4</h1>
+
+  <p class="nf-lede">
+    这个地址上什么都没有。可能是文件名换了，也可能是我压根没做这一页。
+  </p>
+
+  <div class="nf-rule"></div>
+
+  <div class="nf-actions">
+    <a class="btn btn--solid" id="home" href="/">回首页 <span aria-hidden="true">↗</span></a>
+    <a class="btn btn--ghost" id="wip" href="wip.html">施工中的东西 <span aria-hidden="true">↓</span></a>
+  </div>
+
+  <p class="nf-foot">小七 · <a href="mailto:xiaoqiin@outlook.com">xiaoqiin@outlook.com</a></p>
+</main>
+
+<script>
+/* 404 页会被 GitHub Pages 挂在任意路径下，相对链接会指向那个不存在的路径；
+   这里按站点根前缀还原，本地 file:// 打开时退回当前目录。 */
+(function () {
+  var seg = location.pathname.split('/')[1] || '';
+  var root = (location.protocol === 'file:') ? '' : '/' + (seg && seg !== '404.html' ? seg + '/' : '');
+  var home = document.getElementById('home');
+  var wip = document.getElementById('wip');
+  if (home) home.setAttribute('href', root || 'index.html');
+  if (wip) wip.setAttribute('href', (root || './') + 'wip.html');
+})();
+</script>
+</body>
+</html>

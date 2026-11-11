@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DSH 状态面板 — 5 页，0 个第三方依赖 ｜ 小七</title>
+<meta name="description" content="跑在 NAS 上的一块状态面板：5 个页面、0 个第三方依赖，每 2 秒读一次 /proc 与 cgroup。只能从飞牛桌面进来，能启停服务，也能重启自己。">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E3EBE7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E3EBE7'/%3E%3Crect x='6' y='6' width='14' height='14' fill='%2312241F'/%3E%3Ccircle cx='23' cy='21' r='5' fill='%23F07A5E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dsh-status.css">
+</head>
+<body>
+
+<a class="skip" href="#s1">跳到正文</a>
+
+<!-- ============ 顶栏（全页唯一 sticky） ============ -->
+<header class="masthead">
+  <div class="mh__in">
+    <a class="brand" href="../../index.html" aria-label="小七 · 回到首页">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">小七</span>
+    </a>
+    <a class="back" href="../../index.html"><span aria-hidden="true">←</span> 回到首页</a>
+    <span class="mh__meta">WORK Nº06</span>
+    <a class="mh__mail" href="mailto:xiaoqiin@outlook.com">xiaoqiin@outlook.com</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ S0 · 首屏（纸 · 真 100svh） ============ -->
+  <section class="band band--A" id="s0" aria-labelledby="s0-t">
+    <div class="in">
+      <div class="spine hero__in">
+
+        <div class="hero__top">
+          <div class="hero__txt">
+            <p class="hero__kick kick"><span class="k1">WORK Nº06</span><span>DSH STATUS PANEL</span></p>
+            <h1 class="hero__title" id="s0-t">藏在回环里的<br>那块面板</h1>
+            <p class="hero__intro">它只做一件事：让我在客厅用手机就知道，NAS 上每天在用的那个 AI 会话工具还活着没有。它不替我做事，只让我少开一次电脑。</p>
+          </div>
+
+          <figure class="hero__icon">
+            <picture>
+              <source type="image/webp" srcset="assets/icon-512.webp">
+              <img src="assets/icon-512.png" width="512" height="512" decoding="async"
+                   alt="手绘图标：一块蓝底，中间一头白鲸，肚子上一个绿色小圆点。">
+            </picture>
+          </figure>
+        </div>
+
+        <dl class="facts">
+          <div>
+            <dt class="facts__k">页面</dt>
+            <dd><span class="facts__v">5 页</span><span class="facts__b facts__b--ink" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">依赖</dt>
+            <dd><span class="facts__v">0 个</span><span class="facts__b facts__b--teal" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">断言</dt>
+            <dd><span class="facts__v">44 条</span><span class="facts__b facts__b--indigo" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">内存</dt>
+            <dd><span class="facts__v">20 MB</span><span class="facts__b facts__b--ink" aria-hidden="true"></span></dd>
+          </div>
+        </dl>
+
+        <p class="hero__act"><a class="btn" href="#s1">往下读</a></p>
+
+        <p class="hero__foot">
+          <span class="stamp">快照 2026-11-06</span>
+          <span>读完约 4 分钟</span>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ A · 它是怎么来的（纸二 · 四格） ============ -->
+  <section class="band band--B" id="comic" aria-labelledby="comic-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="comic-t">它是怎么来的</h2>
+        </header>
+
+        <figure class="fig fig--comic">
+          <div class="fig__body fig__body--shot">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/comic-861.webp 861w, assets/comic-1286.webp 1286w"
+                      sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), min(861px, 92vw)">
+              <img src="assets/comic-861.jpg"
+                   srcset="assets/comic-861.jpg 861w, assets/comic-1286.jpg 1286w"
+                   sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), min(861px, 92vw)"
+                   width="861" height="481" loading="lazy" decoding="async"
+                   alt="四格：①对着 NAS 比耶，装好 dsh；②窝在沙发里捧笔记本远程用；③蓝脸冒汗，报错刷满屏；④头顶灯泡，想到做一块状态面板。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap">装上了 → 在家里用 → 报错，不知道它什么状态 → 那就做块面板。</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S1 · 我要的只是「它还活着吗」（纸） ============ -->
+  <section class="band band--A" id="s1" aria-labelledby="s1-t" tabindex="-1">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s1-t">我要的只是「它还活着吗」</h2>
+          <p class="lede">我要的不是日志。日志我有的是，journalctl 能给我全部。可我在客厅，手机上，不想读它。</p>
+        </header>
+
+        <figure class="fig fig--shot">
+          <div class="fig__body fig__body--shot">
+            <!-- 素材口径：969w 档是对 646 原图的上采样（源图裁不出 969 原生像素，差约 2.42/255）。
+                 原生最大 646，审计请勿按原生 2× 素材验这张图；显示宽 636，@1x 取 646 档、@2x 取 969 档。 -->
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/phone-overview-646.webp 646w, assets/phone-overview-969.webp 969w"
+                      sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 634px">
+              <img src="assets/phone-overview-646.jpg"
+                   srcset="assets/phone-overview-646.jpg 646w, assets/phone-overview-969.jpg 969w"
+                   sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 634px"
+                   width="646" height="234" loading="lazy" decoding="async"
+                   alt="手机概览页局部裁切：上端一行大的时间数字，下面两行小字，再下面「打开 Web UI」「重启」「更多」三个按钮。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap">概览页，手机上，2026-11-06 采集。</figcaption>
+        </figure>
+
+        <p class="after-fig">DSH 是我每天都用的 AI 会话工具，跑在 NAS 上。它坏的时候没有症状，就是突然不回话。</p>
+
+        <p>要知道它怎么了，我得回书房，开电脑，ssh 进去，敲一遍 systemctl status，再翻 journalctl 最后几十行。才敢判断它是卡住了，是内存吃满了，还是它其实好好的，只是我在等的那个请求特别慢。</p>
+
+        <div class="pair">
+          <p class="z">这套动作做三次还受得了，做三十次就成了一个念头。我要的东西很小：它活着没有，内存吃了多少，断了能不能在手机上点一下弄活。就这三件。于是我做了这么一块东西，不是一套监控系统。</p>
+          <aside class="note"><span class="note__k">口径</span> 采集间隔 2 秒，读 /proc 与 cgroup。</aside>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ B · 它长这样（纸二 · 两条整屏） ============ -->
+  <section class="band band--B" id="look" aria-labelledby="look-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="look-t">它长这样</h2>
+        </header>
+
+        <p>电脑端和手机是同一套界面。左边一条常驻导航，右边一列：四个指标、服务摘要、日志。</p>
+
+        <p>手机把导航收成底部五个 tab，内容压成一列卡片，往下滑着看。</p>
+
+        <figure class="look">
+          <div class="look__grid">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/desk-861.webp 861w, assets/desk-1286.webp 1286w, assets/desk-1722.webp 1722w"
+                      sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 636px">
+              <img class="look__desk" src="assets/desk-861.jpg"
+                   srcset="assets/desk-861.jpg 861w, assets/desk-1286.jpg 1286w, assets/desk-1722.jpg 1722w"
+                   sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 636px"
+                   width="861" height="538" loading="lazy" decoding="async"
+                   alt="桌面端整屏：左边一列侧栏导航，右边四张大数字块，下面是服务列表和日志面板。">
+            </picture>
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/mobile-260.webp 260w, assets/mobile-390.webp 390w, assets/mobile-520.webp 520w"
+                      sizes="(max-width:680px) 60vw, 200px">
+              <img class="look__phone" src="assets/mobile-260.jpg"
+                   srcset="assets/mobile-260.jpg 260w, assets/mobile-390.jpg 390w, assets/mobile-520.jpg 520w"
+                   sizes="(max-width:680px) 60vw, 200px"
+                   width="260" height="564" loading="lazy" decoding="async"
+                   alt="手机端整屏：卡片从上往下排，底部五个 tab。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap">左 1440、右 393，两屏整屏；看形态不看字，字小是缩的。2026-11-07。</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S2 · 一个文件，一个页面（纸 · 全页唯一无图） ============ -->
+  <section class="band band--A" id="s2" aria-labelledby="s2-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s2-t">一个文件，一个页面</h2>
+          <p class="lede">后端一个 Python 文件，只用标准库，每 2 秒读一次 /proc 与 cgroup。</p>
+        </header>
+
+        <p>前端一个 HTML，原生 JS，没有框架，也没有构建。它打成一个飞牛应用，桌面上一个图标，点进去就是面板。</p>
+
+        <div class="s2strip">
+          <div class="s2strip__c"><span class="s2strip__t">statusd.py</span></div>
+          <div class="s2strip__c"><span class="s2strip__t">index.html</span></div>
+          <div class="s2strip__c"><span class="s2strip__t">dsh-status.fpk</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S3 · 它只肯从飞牛桌面进来（纸二） ============ -->
+  <section class="band band--B" id="s3" aria-labelledby="s3-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s3-t">它只肯从飞牛桌面进来</h2>
+          <p class="lede">面板只听 127.0.0.1。局域网里没有任何一台设备能直连它，这是我定的。</p>
+        </header>
+
+        <p>进来的路是这样：先过飞牛桌面那道门，它本来就要账号。再从桌面图标点进来，中间经过一个只做转发的应用，最后才碰到面板。</p>
+
+        <figure class="fig">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--teal"></i>青：已通过</span>
+            <span><i class="sw sw--indigo"></i>靛：转发的机器</span>
+            <span><i class="sw sw--sage"></i>灰绿：没有在听</span>
+          </p>
+          <div class="fig__body gate" role="img" aria-label="四层准入：飞牛桌面要账号，3082 只转发不鉴权，3081 只听回环，入口令牌换成七天 Cookie。局域网直连 3081 没有应答。">
+            <p class="gate__ax gate__ax--out">外侧</p>
+            <div class="gate__b gate__b--1 gate__b--teal">
+              <span class="gate__k">桌面</span><span class="gate__n">账号门</span><span class="gate__h">先登录才能点图标</span>
+            </div>
+            <span class="gate__arw gate__arw--1" aria-hidden="true"></span>
+            <div class="gate__b gate__b--2 gate__b--indigo">
+              <span class="gate__k">3082</span><span class="gate__n">纯反代</span><span class="gate__h">只转发，不鉴权</span>
+            </div>
+            <span class="gate__arw gate__arw--2" aria-hidden="true"></span>
+            <p class="gate__ax gate__ax--loop">回环以内</p>
+            <div class="gate__b gate__b--3 gate__b--teal gate__b--wall">
+              <span class="gate__k">3081</span><span class="gate__n">面板本体</span><span class="gate__h">只听 127.0.0.1</span>
+            </div>
+            <div class="gate__b gate__b--sage gate__b--dead">
+              <span class="gate__x" aria-hidden="true"></span>
+              <span class="gate__k">LAN</span><span class="gate__n">直连 3081</span><span class="gate__h">没有应答</span>
+            </div>
+            <span class="gate__arw gate__arw--3" aria-hidden="true"></span>
+            <div class="gate__b gate__b--4 gate__b--teal">
+              <span class="gate__k">Cookie</span><span class="gate__n">七天有效</span><span class="gate__h">令牌换来的通行证</span>
+            </div>
+          </div>
+          <figcaption class="fig__cap">示意图：从飞牛桌面到面板的四层准入。</figcaption>
+        </figure>
+
+        <p class="after-fig">3082 只做透明转发，自己不做鉴权。面板不认识你是谁，它只认一张券。券是十二位的入口令牌，藏在图标的链接里。</p>
+
+        <p>第一次进来，面板把它换成一张七天有效的 Cookie，同时把地址栏里的参数抹掉。不然你截图分享的时候，就把钥匙一起发出去了。令牌换掉，所有发出去的 Cookie 当场失效。</p>
+
+        <div class="pair">
+          <p class="z">我没有再做一套账号体系，我借用了已经有的那道门。代价直说：局域网里能点开飞牛桌面的人就能用这块面板，它没有第二层口令。</p>
+          <aside class="note"><span class="note__k">口径</span> 链路取自 HANDOVER §2，2026-11-06 核对。</aside>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S4 · 能看，也能点（纸） ============ -->
+  <section class="band band--A" id="s4" aria-labelledby="s4-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s4-t">能看，也能点</h2>
+          <p class="lede">只能看的面板，看到它挂了还是得去 ssh。所以按钮得有。</p>
+        </header>
+
+        <p>服务页上每个服务都能启、能停、能设开机自启，也能重启。</p>
+
+        <p>面板自己也在这一页的服务列表里。它重启自己之前会先说一句大约三秒后回来，然后真的回来了，页面自己接上。</p>
+
+        <div class="pair">
+          <p class="warn">重启 DSH 会断掉正在用它的人，点下去之前先想清楚会话里有没有人。</p>
+          <aside class="note"><span class="note__k">时刻</span> 2026-11-06，服务页三行开关。</aside>
+        </div>
+
+        <figure class="fig fig--shot">
+          <div class="fig__body fig__body--shot">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/services-750.webp 750w, assets/services-1124.webp 1124w"
+                      sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 634px">
+              <img src="assets/services-1124.jpg"
+                   srcset="assets/services-750.jpg 750w, assets/services-1124.jpg 1124w"
+                   sizes="(max-width:360px) calc(100vw - 32px), (max-width:680px) calc(100vw - 40px), 634px"
+                   width="1124" height="605" loading="lazy" decoding="async"
+                   alt="服务页局部裁切：三个服务各占一行，每行右侧有一个开关。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap">服务页，三个服务各一行开关，2026-11-06。</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S5 · 图标是它自己画的（纸二） ============ -->
+  <section class="band band--B" id="s5" aria-labelledby="s5-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s5-t">图标是它自己画的</h2>
+          <p class="lede">图标是 DeepSeek 自己画的。一块蓝底，一头白鲸，肚子上一个绿点。</p>
+        </header>
+
+        <figure class="specimen">
+          <picture>
+            <source type="image/webp" srcset="assets/icon-64.webp">
+            <img src="assets/icon-64.png" width="64" height="64" loading="lazy" decoding="async"
+                 alt="同一枚手绘图标的 64 像素版本，蓝底白鲸，肚子一个绿点。">
+          </picture>
+          <figcaption class="specimen__l">图标 64 像素，与首屏同一张，未重绘。</figcaption>
+        </figure>
+
+        <p>比例有点歪，眼睛不圆，尾巴张得太开，按规范它不合格，我第一版想过重画一个。</p>
+
+        <p>后来没换。首屏那个和这一节这个小的，是同一张图，谁也没去修边。它效果一般，但它是它自己画的，这个理由就够了。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S6 · 它现在还不够好（墨底收口） ============ -->
+  <section class="band band--C" id="s6" aria-labelledby="s6-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <h2 class="ch__t" id="s6-t">它现在还不够好</h2>
+          <p class="lede">三个地方我明确知道没做好。</p>
+        </header>
+
+        <p>只读分享链接能翻到全量日志，给出去的是整页。还没决定要不要裁。</p>
+
+        <p>分享地址绑着这台机器的内网 IP，换个网段就退回 127.0.0.1。</p>
+
+        <p>没有多机，一台 NAS 一块面板，第二台得再装一遍。</p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="footer">
+  <div class="in">
+    <div class="footer__in">
+      <span><a href="../../index.html#work">← 全部作品</a></span>
+      <span>小七的个人站</span>
+      <span>页面数据来自本机采集</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

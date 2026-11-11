@@ -1,0 +1,232 @@
+{
+  "brand": "小七",
+  "email": "xiaoqiin@outlook.com",
+  "title": "小七 — 把好奇整理成形状",
+  "description": "小七的个人站：几个能跑的小工具，一堆因为喜欢才留下的东西。不追热点，更新随缘。",
+  "hero": {
+    "eyebrow": "个人档案 · 兴趣与 AI 作品 · Nº1",
+    "h1a": "把好奇",
+    "h1b": "整理成",
+    "h1accent": "形状",
+    "lede": "我是小七。用 AI 写点能跑的小工具，也攒些没什么用但很喜欢的东西。不追热点，想到才更新。",
+    "ctaWork": "看看做了什么 ↓",
+    "ctaAbout": "关于小七 ↗",
+    "stats": [
+      {
+        "dt": "作品",
+        "dd": "04"
+      },
+      {
+        "dt": "笔记",
+        "dd": "00"
+      },
+      {
+        "dt": "构建",
+        "dd": "00"
+      },
+      {
+        "dt": "直角",
+        "dd": "90°"
+      }
+    ],
+    "tag": "推荐 Nº04",
+    "span": "施工中",
+    "rail": "THINGS I MADE",
+    "feature": {
+      "kind": "推荐",
+      "no": "Nº04",
+      "title": "本地生图模型练习",
+      "note": "法尔伽组图",
+      "state": "施工中",
+      "href": "wip.html"
+    }
+  },
+  "marquee": [
+    "想法先用起来",
+    "SHIP THE IDEA",
+    "先做出来再谈风格",
+    "MAKE, THEN TALK",
+    "保持好奇",
+    "STAY CURIOUS",
+    "不知道就试",
+    "TRY IT"
+  ],
+  "works": [
+    {
+      "slug": "task-board",
+      "title": "记账工具",
+      "en": "Task Board",
+      "tags": "前端 · 工作流",
+      "year": "2026",
+      "status": "在用",
+      "summary": "十几件事挤一本账，一眼看出哪件卡住",
+      "href": "guide/index.html",
+      "fact": "",
+      "story": {
+        "cause": "",
+        "make": "",
+        "now": ""
+      },
+      "stack": []
+    },
+    {
+      "slug": "dsh-status",
+      "title": "DSH 状态面板",
+      "en": "DSH Status Panel",
+      "tags": "系统监控 · 面板",
+      "year": "2026",
+      "status": "在用",
+      "summary": "不用 ssh，也知道它活着",
+      "href": "work/dsh-status/index.html",
+      "fact": "",
+      "story": {
+        "cause": "",
+        "make": "",
+        "now": ""
+      },
+      "stack": []
+    },
+    {
+      "slug": "mobile",
+      "title": "移动端适配",
+      "en": "Mobile Pass",
+      "tags": "移动端 · 适配",
+      "year": "2026",
+      "status": "施工中",
+      "summary": "把桌面工具塞进手机，白屏七次",
+      "href": "wip.html",
+      "fact": "",
+      "story": {
+        "cause": "",
+        "make": "",
+        "now": ""
+      },
+      "stack": []
+    },
+    {
+      "slug": "farga",
+      "title": "本地生图模型练习",
+      "sub": "法尔伽组图",
+      "en": "Local Image Model",
+      "tags": "生图 · 练习",
+      "year": "2026",
+      "status": "施工中",
+      "summary": "",
+      "href": "wip.html",
+      "fact": "",
+      "story": {
+        "cause": "",
+        "make": "",
+        "now": ""
+      },
+      "stack": []
+    }
+  ],
+  "interests": [
+    {
+      "zh": "至上主义画作",
+      "en": "Suprematism",
+      "note": "方块、圆、一条斜线，把感知削到只剩形状。",
+      "href": "suprematism/index.html"
+    },
+    {
+      "zh": "米家 × HA × 大模型",
+      "en": "Mijia · HA · LLM",
+      "status": "施工中",
+      "href": "wip.html"
+    },
+    {
+      "zh": "旧书店淘的旧画册",
+      "en": "Old Picture Books",
+      "status": "施工中",
+      "href": "wip.html"
+    }
+  ],
+  "about": {
+    "big": "AI 是我的第二双手。",
+    "para": "我是小七，不搞设计也不做学术。平时遇到烦人的重复活，就哄着模型写点脚本替我干；偶尔攒些没用的怪东西。这里没有进度表，也不背指标，东西能跑就算成功，跑不动就先放着。",
+    "facts": [
+      {
+        "dt": "在做",
+        "dd": "把重复的活交给脚本，把剩下的时间留给自己"
+      },
+      {
+        "dt": "时区",
+        "dd": "UTC+8"
+      },
+      {
+        "dt": "常用",
+        "dd": "Claude · Cursor · 一台不关机的机器"
+      },
+      {
+        "dt": "邮箱",
+        "dd": "xiaoqiin@outlook.com",
+        "href": "mailto:xiaoqiin@outlook.com"
+      }
+    ]
+  },
+  "now": {
+    "stamp": "NOW",
+    "zone": "UTC+8",
+    "quarter": "2026.Q4",
+    "rows": [
+      {
+        "label": "在做",
+        "content": "个人站 v0.3：把编出来的内容换成真的",
+        "status": "本期"
+      },
+      {
+        "label": "在做",
+        "content": "工作区治理 v2：ws 工具链 + 四区拓扑渲染",
+        "status": "进行中"
+      },
+      {
+        "label": "在做",
+        "content": "foragent 交接最小方案：bridge + 信封 + 门禁",
+        "status": "方案已评审，未实施"
+      },
+      {
+        "label": "刚完成",
+        "content": "马列维奇至上主义图录 32 幅",
+        "status": "已入库"
+      }
+    ],
+    "legend": [
+      {
+        "label": "在用",
+        "mark": "mark--live"
+      },
+      {
+        "label": "施工中",
+        "mark": "mark--half"
+      },
+      {
+        "label": "停了",
+        "mark": "mark--off"
+      }
+    ],
+    "caption": "照片不放了，放点最近真正在干的事。",
+    "updated": "2026.11.11"
+  },
+  "notes": [],
+  "notesNote": "还没有 · 等有真事再写",
+  "notesEmpty": "还没写。等真事发生再写。",
+  "footer": {
+    "kicker": "把好奇做成东西",
+    "cta": "说点什么？",
+    "links": [
+      {
+        "label": "写信给我",
+        "href": "mailto:xiaoqiin@outlook.com"
+      },
+      {
+        "label": "RSS 订阅",
+        "href": "feed.xml"
+      },
+      {
+        "label": "回顶部 ↑",
+        "href": "#top"
+      }
+    ]
+  }
+}

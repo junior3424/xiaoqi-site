@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js" data-type="software" data-radius="sharp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>两棵树，各一本账 — 35 个任务 / 3 个工作区 / 本区 143 条事件 | 小七</title>
+<meta name="description" content="我最怕的是临时目录一删，交付说明里的引用跟着断。所以我把工作区劈成两半，用只追加的纯文本账本记账：两棵树、各一本账、机器补账、每次入账写五行。">
+<meta name="page-type" content="software">
+<meta name="site-kind" content="software">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E3EBE7">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="两棵树，各一本账">
+<meta property="og:description" content="两棵树、各一本账、机器补账、每次入账写五行：42 天 / 3 个工作区 / 35 个任务 / 本区 143 条事件。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E3EBE7'/%3E%3Crect x='6' y='6' width='14' height='14' fill='%2312241F'/%3E%3Ccircle cx='23' cy='21' r='5' fill='%23F07A5E'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+
+<a class="skip" href="#ch0">跳到正文</a>
+
+<!-- ============ 顶栏（唯一 sticky） ============ -->
+<header class="masthead">
+  <div class="mh__in">
+    <a class="brand" href="../index.html" aria-label="小七 · 回到首页">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">小七</span>
+    </a>
+    <a class="back" href="../index.html"><span aria-hidden="true">←</span> 回到首页</a>
+    <span class="mh__meta">GUIDE Nº01</span>
+    <a class="mh__mail" href="mailto:xiaoqiin@outlook.com">xiaoqiin@outlook.com</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="rules" aria-hidden="true">
+    <div class="rules__col rules__col--l"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i><i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i><i style="--i:28"></i><i style="--i:29"></i><i style="--i:30"></i><i style="--i:31"></i><i style="--i:32"></i><i style="--i:33"></i><i style="--i:34"></i><i style="--i:35"></i><i style="--i:36"></i><i style="--i:37"></i><i style="--i:38"></i><i style="--i:39"></i><i style="--i:40"></i><i style="--i:41"></i><i style="--i:42"></i><i style="--i:43"></i><i style="--i:44"></i><i style="--i:45"></i><i style="--i:46"></i><i style="--i:47"></i><i style="--i:48"></i><i style="--i:49"></i><i style="--i:50"></i><i style="--i:51"></i><i style="--i:52"></i><i style="--i:53"></i><i style="--i:54"></i><i style="--i:55"></i><i style="--i:56"></i><i style="--i:57"></i><i style="--i:58"></i><i style="--i:59"></i><i style="--i:60"></i><i style="--i:61"></i><i style="--i:62"></i><i style="--i:63"></i><i style="--i:64"></i><i style="--i:65"></i><i style="--i:66"></i><i style="--i:67"></i><i style="--i:68"></i><i style="--i:69"></i><i style="--i:70"></i><i style="--i:71"></i><i style="--i:72"></i><i style="--i:73"></i><i style="--i:74"></i><i style="--i:75"></i><i style="--i:76"></i><i style="--i:77"></i><i style="--i:78"></i><i style="--i:79"></i><i style="--i:80"></i><i style="--i:81"></i><i style="--i:82"></i><i style="--i:83"></i><i style="--i:84"></i><i style="--i:85"></i><i style="--i:86"></i><i style="--i:87"></i><i style="--i:88"></i><i style="--i:89"></i><i style="--i:90"></i><i style="--i:91"></i><i style="--i:92"></i><i style="--i:93"></i><i style="--i:94"></i></div>
+    <div class="rules__col rules__col--r"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i><i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i><i style="--i:28"></i><i style="--i:29"></i><i style="--i:30"></i><i style="--i:31"></i><i style="--i:32"></i><i style="--i:33"></i><i style="--i:34"></i><i style="--i:35"></i><i style="--i:36"></i><i style="--i:37"></i><i style="--i:38"></i><i style="--i:39"></i><i style="--i:40"></i><i style="--i:41"></i><i style="--i:42"></i><i style="--i:43"></i><i style="--i:44"></i><i style="--i:45"></i><i style="--i:46"></i><i style="--i:47"></i><i style="--i:48"></i><i style="--i:49"></i><i style="--i:50"></i><i style="--i:51"></i><i style="--i:52"></i><i style="--i:53"></i><i style="--i:54"></i><i style="--i:55"></i><i style="--i:56"></i><i style="--i:57"></i><i style="--i:58"></i><i style="--i:59"></i><i style="--i:60"></i><i style="--i:61"></i><i style="--i:62"></i><i style="--i:63"></i><i style="--i:64"></i><i style="--i:65"></i><i style="--i:66"></i><i style="--i:67"></i><i style="--i:68"></i><i style="--i:69"></i><i style="--i:70"></i><i style="--i:71"></i><i style="--i:72"></i><i style="--i:73"></i><i style="--i:74"></i><i style="--i:75"></i><i style="--i:76"></i><i style="--i:77"></i><i style="--i:78"></i><i style="--i:79"></i><i style="--i:80"></i><i style="--i:81"></i><i style="--i:82"></i><i style="--i:83"></i><i style="--i:84"></i><i style="--i:85"></i><i style="--i:86"></i><i style="--i:87"></i><i style="--i:88"></i><i style="--i:89"></i><i style="--i:90"></i><i style="--i:91"></i><i style="--i:92"></i><i style="--i:93"></i><i style="--i:94"></i></div>
+  </div>
+
+
+  <!-- ============ 首屏：一屏独立，底行收口，不许露下一章标题 ============ -->
+  <section class="hero" id="hero" aria-labelledby="hero-t">
+    <div class="in">
+      <div class="spine hero__in">
+        <p class="hero__kick kick"><span class="k1">GUIDE Nº01</span><span>两棵树 · 各一本账</span></p>
+
+        <h1 class="hero__title" id="hero-t" data-copy="A1">35 个任务<br>3 个目录，各一本<span class="acc">账</span></h1>
+
+        <p class="hero__intro" data-copy="A2">3 个工作区里躺着 35 个任务，杂事混在一起，连草稿也把目录搅乱了。这篇讲的就是我为此做的小东西：它长什么样、一件事怎么走完、它怎么自己转，以及它管不住什么。</p>
+
+        <!-- H · 首屏 facts 带（ink 数字 + 28×4 色条 + 1px 竖线） -->
+        <dl class="facts" aria-label="这套机制的现场规模">
+          <div>
+            <dt class="facts__k">天</dt>
+            <dd><span class="facts__v">42</span><span class="facts__b facts__b--teal" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">工作区</dt>
+            <dd><span class="facts__v">3</span><span class="facts__b facts__b--indigo" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">任务</dt>
+            <dd><span class="facts__v">35</span><span class="facts__b facts__b--mustard" aria-hidden="true"></span></dd>
+          </div>
+          <div>
+            <dt class="facts__k">事件 · 本区</dt>
+            <dd><span class="facts__v">143</span><span class="facts__b facts__b--coral" aria-hidden="true"></span></dd>
+          </div>
+        </dl>
+
+        <p class="hero__act">
+          <a class="btn" href="#replay" data-copy="A6">从 35 个任务里挑一件看 <span aria-hidden="true">↓</span></a>
+        </p>
+
+        <p class="hero__foot" aria-label="数据截止与阅读成本">
+          <span data-copy="A4">2026-11-05 18:33 快照</span>
+          <span data-copy="A5">读完约 9 分钟</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CH 00 · 引子 ============ -->
+  <section class="band band--A ch--0" id="ch0" aria-labelledby="ch0-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <p class="ch__num">CH 00</p>
+          <p class="ch__q" data-copy="B1-0">为什么定规矩？</p>
+          <h2 class="ch__t" id="ch0-t" data-copy="B0-T">最怕的一件事</h2>
+          <p class="lede" data-copy="B2-0">以前杂事和草稿都堆在同一层目录。整理的时候，我最怕把放临时东西的那一层全删了。</p>
+        </header>
+
+        <!-- 漫画（四格）：把「最怕删错」先画出来，再进正文 -->
+        <figure class="fig comic" id="f-comic">
+          <div class="fig__body fig__body--shot">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/comic-400.webp 400w, assets/comic-720.webp 720w, assets/comic-1080.webp 1080w, assets/comic-1440.webp 1440w"
+                      sizes="(max-width: 900px) 92vw, 861px">
+              <img src="assets/comic-1080.jpg"
+                   srcset="assets/comic-400.jpg 400w, assets/comic-720.jpg 720w, assets/comic-1080.jpg 1080w, assets/comic-1440.jpg 1440w"
+                   sizes="(max-width: 900px) 92vw, 861px"
+                   width="2741" height="1530" loading="lazy" decoding="async"
+                   alt="四格漫画：一、电脑桌面文件乱成一团，小熊皱着眉；二、屏幕上只有一个「最终结果」文件，小熊眼睛发亮说找到了；三、弹窗写着 ERROR 依赖文件已被误删，小熊冒汗；四、小熊对着显示器发火。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap">四格：找不到文件 → 找到 → 一次误删 → 重来。2026-11 出图。</figcaption>
+        </figure>
+
+        <!-- F0 一锅粥：全页第一张图，图先于解释 -->
+        <figure class="fig" id="f0">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--teal"></i>能拿走的</span>
+            <span><i class="sw sw--sage"></i>自己造的</span>
+            <span><i class="sw sw--indigo"></i>机器写的</span>
+            <span><i class="sw sw--mustarddot"></i>某一刻的快照</span>
+            <span><i class="sw sw--coralx"></i>已经断了</span>
+          </p>
+          <div class="fig__body f0" role="img" aria-label="一框里挤着 16 块东西：交付、工程、归档与探针、临时目录、半截下载、备份、AC 输出混在一起，一块珊瑚色的断口被压住，右上与右下各有一块越出边框。">
+            <span class="f0b f0b--teal f0b--on" style="--x:2;--y:4;--w:26;--h:20"><i class="f0b__t">交付 · 分享页</i></span>
+            <span class="f0b f0b--sage f0b--hide-sm" style="--x:24;--y:2;--w:20;--h:16"><i class="f0b__t">探针脚本</i></span>
+            <span class="f0b f0b--sage" style="--x:60;--y:2;--w:20;--h:26"><i class="f0b__t">临时目录 tmp</i></span>
+            <span class="f0b f0b--sage f0b--hide-sm" style="--x:8;--y:24;--w:17;--h:22"><i class="f0b__t">半截下载</i></span>
+            <span class="f0b f0b--indigo" style="--x:21;--y:28;--w:26;--h:17"><i class="f0b__t">04:04 巡检输出</i></span>
+            <span class="f0b f0b--mustard f0b--hide-sm" style="--x:45;--y:20;--w:15;--h:14"><i class="f0b__t">10-26 快照</i></span>
+            <span class="f0b f0b--indigo" style="--x:2;--y:50;--w:20;--h:15"><i class="f0b__t">run.sh 日志</i></span>
+            <span class="f0b f0b--coral f0b--on" style="--x:18;--y:44;--w:13;--h:26"><i class="f0b__t">① 断了</i><i class="f0__cut" aria-hidden="true"></i></span>
+            <span class="f0b f0b--teal" style="--x:28;--y:46;--w:30;--h:19"><i class="f0b__t">工程 · 文档归档</i></span>
+            <span class="f0b f0b--indigo f0b--hide-sm" style="--x:61;--y:32;--w:21;--h:15"><i class="f0b__t">心跳 · 每天 04:00</i></span>
+            <span class="f0b f0b--teal" style="--x:64;--y:52;--w:21;--h:18"><i class="f0b__t">归档 · 2026-10</i></span>
+            <span class="f0b f0b--mustard" style="--x:86;--y:26;--w:18;--h:17"><i class="f0b__t">今天 04:04:49</i></span>
+            <span class="f0b f0b--coral" style="--x:83;--y:86;--w:21;--h:17"><i class="f0b__t">删除线断口</i><i class="f0__cut" aria-hidden="true"></i></span>
+            <span class="f0b f0b--sage" style="--x:4;--y:70;--w:21;--h:16"><i class="f0b__t">备份 · 未命名 init</i></span>
+            <span class="f0b f0b--sage f0b--hide-sm" style="--x:27;--y:70;--w:24;--h:18"><i class="f0b__t">备份 · 未命名 v2</i></span>
+            <span class="f0b f0b--void f0b--hide-sm" style="--x:53;--y:76;--w:20;--h:18"><i class="f0b__t">记不清的那件</i></span>
+          </div>
+          <figcaption class="fig__cap" data-copy="E1"><b>① 就是下一张的断口</b>；示意，不代表 35 个任务的精确分布。口径 2026-11-05</figcaption>
+        </figure>
+
+        <p class="after-fig">怕的是删掉放临时东西的那层目录。交付说明里只要有一句「详细日志见那个目录」，那条引用就跟着断了——文档看着完整，实际已经指不到东西。</p>
+        <p>这种引用断了不报错。没人点它，它就一直是「看着挺正常」的文档，直到有人真要用。</p>
+
+        <p data-copy="CH0-P3">真正的毛病不在东西多。一件事留下的临时脚本，被另一件事当成成品引用，这种时候谁都不敢删。所以我做了个小东西，让我随时知道每件事走到哪一步、哪些能删。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CH 01 · 劈开工作区（它长什么样） ============ -->
+  <section class="band band--B ch--1" id="ch1" aria-labelledby="ch1-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <p class="ch__num">CH 01</p>
+          <p class="ch__q" data-copy="B1-1">文件往哪儿放？</p>
+          <h2 class="ch__t" id="ch1-t" data-copy="B1-T">工作区劈两半</h2>
+          <p class="lede" data-copy="B2-1">我怕再乱，就先定好东西都放哪儿。位置定死了，才谈得上后面怎么记账。</p>
+        </header>
+
+        <!-- F1 两棵树 -->
+        <figure class="fig" id="f1">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--teal"></i>能拿走的<em>（结果树）</em></span>
+            <span><i class="sw sw--sage"></i>自己造的<em>（过程树）</em></span>
+            <span><i class="sw sw--coralx"></i>删了会断</span>
+          </p>
+          <div class="fig__body f1" role="img" aria-label="两棵树并排，左宽右窄。左树四行等距对齐，青色实心块写着 DELIVERY、projects、docs、SHARED，每块右侧是它的名字；中间一根独立居中的判据线，方块在顶端、判据线三字在线下方；右树三行鼠尾草色虚线块逐行右移、深浅不一，每块右侧标着试一次就扔、没下完的、随手放一下；第四行是珊瑚色断口块，右上角一个叉，块右侧一行字带左向箭头，写着删掉自己造的，不伤能拿走的。">
+            <div class="trees">
+              <div class="trees__col">
+                <span class="tree__h" data-copy="C2L">能拿走的 · 4 处</span>
+                <span class="tr"><span class="tr__blk tr__blk--teal"><em>DELIVERY</em></span></span>
+                <span class="tr"><span class="tr__blk tr__blk--teal"><em>projects</em></span></span>
+                <span class="tr"><span class="tr__blk tr__blk--teal"><em>docs</em></span></span>
+                <span class="tr"><span class="tr__blk tr__blk--teal"><em>SHARED</em></span></span>
+              </div>
+              <div class="trees__mid" aria-hidden="true">
+                <span class="trees__sq"></span>
+                <span class="trees__ln"></span>
+                <span class="trees__lb">判据线</span>
+              </div>
+              <div class="trees__col">
+                <span class="tree__h" data-copy="C2R">自己造的 · 1 处</span>
+                <span class="tr" style="--ind:6"><span class="tr__blk tr__blk--sage"><em>探针/</em></span><span class="tr__lb" data-copy="C2b-1">试一次就扔</span></span>
+                <span class="tr" style="--ind:22"><span class="tr__blk tr__blk--sage"><em>下载/</em></span><span class="tr__lb" data-copy="C2b-2">没下完的</span></span>
+                <span class="tr" style="--ind:38"><span class="tr__blk tr__blk--sage"><em>备份 v2/</em></span><span class="tr__lb" data-copy="C2b-3">随手放一下</span></span>
+                <span class="tr" style="--ind:0"><span class="tr__blk tr__blk--coral"><em>断口</em><i class="tr__x" aria-hidden="true"></i></span><span class="tr__lb" data-copy="C2b">← 删右不伤左</span></span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="fig__cap" data-copy="E2"><b>删掉自己造的，不伤能拿走的</b>：左为结果树 4 处，右为过程树。口径 2026-11-05。</figcaption>
+        </figure>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">01</span><span data-copy="H3-1-1">两棵树</span></h3>
+        <p class="z" data-copy="Z1">文件乱，是把能带走的和只用一次的混在同一层了。分开后，成品那棵树不依赖另一棵，能整段复制带走；要删的那棵随时能整棵删——前提是没人从结果树里指过去，这区现在还挂着 4 条，所以我得靠检查盯着。</p>
+        <div class="pair">
+          <p>我把整个工作区一分为二。一边放能直接拿走的东西，包含 projects、docs、DELIVERY 和 SHARED_OUT；另一边是只用一次的 <code>_proc</code> 目录，专门按日期归档。</p>
+          <aside class="note note--inline">
+            <span class="note__k">口径</span>
+            <span data-copy="G2-1">这 4 条按 tb doctor 的 C2 计数，修掉一条当场少一条。</span>
+          </aside>
+        </div>
+        <p data-copy="CH1-P2">判据只有一条：哪怕我直接删空整个过程树，结果树里的文件引用也一条链都不许断。</p>
+        <p>不过眼下这个区里还挂着 4 条指向过程树的引用。</p>
+        <p data-copy="CH1-P3">三个区共三本账，引擎是同一份脚本。</p>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">02</span><span data-copy="H3-1-2">只追加的账本</span></h3>
+        <p class="z" data-copy="Z2">分好位置后我还得把发生过的事记下来。我只往后写、不回头改，写错了补一行更正。好处是文件本身不会被覆盖；代价是编号靠读-改-写，两个人同时抢号会撞号，重放时按号去重会悄悄丢一行——我一个人用没撞过，多人得自己加锁。</p>
+        <p>我用纯文本做账本，每行记一条，只往文件末尾追加，绝不回头修改旧记录。里面也不直接存当前状态，全靠临时重新计算出来。</p>
+
+        <div class="panel panel--ok">
+          <p class="panel__bar"><span data-copy="F6-1">TASKS/events.jsonl</span><span class="ts">seq 14</span></p>
+          <pre>{"seq":14,"ts":"2026-10-31 12:49:24","type":"artifact","task":"NWK-0001","by":"jianran",
+ "path":"projects/dsh-status/server.py",
+ "sha256":"0f994a6cc53a1f3eae15120b6add87304a258b8b2aad31983d299c81a2ad05f8",
+ "note":"状态面板服务端"}</pre>
+        </div>
+
+        <p>我当初没用数据库，是因为按约定得让人和 Agent 都能直接读取；一旦套上数据库，它就变成只有特定程序才看得懂的黑盒了。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CH 02 · 单事全流程（一件事怎么走） ============ -->
+  <section class="band band--A ch--2" id="ch2" aria-labelledby="ch2-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <p class="ch__num">CH 02</p>
+          <p class="ch__q" data-copy="B1-2">一件事怎么走？</p>
+          <h2 class="ch__t" id="ch2-t" data-copy="B2-T">一件事走五步</h2>
+          <p class="lede" data-copy="B2-2">地方定好了，我接下来就得想，怎么随时知道每件事走到哪一步了——于是每个区有了一本账，和写账的五个动作。</p>
+        </header>
+
+        <!-- F5 五行入账 -->
+        <figure class="fig" id="f5">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--void"></i>人写的一行</span>
+            <span><i class="sw sw--mustarddot"></i>落账那一刻</span>
+            <span><i class="sw sw--indigo"></i>机器贴的</span>
+            <span><i class="sw sw--teal"></i>视图 · 可重建</span>
+          </p>
+          <div class="fig__body f5" role="img" aria-label="五个方格从左到右连成一条流水线：new 记下要做、claim 领走、artifact 登记产物、done 落账、tail 机器贴，前四格之间各有箭头，第五格后面没有箭头；顶部一行计数头写着一次入账 5 行、人写 4、机器 1；下方是一整条青色视图格。">
+            <p class="f5__head"><span data-copy="D7">5 行 人4 机1</span></p>
+            <div class="f5__row">
+              <div class="f5__cell"><span class="e">new</span><span class="c" data-copy="C6-1">记下要做</span></div>
+              <div class="f5__arw" aria-hidden="true"><i></i></div>
+              <div class="f5__cell"><span class="e">claim</span><span class="c" data-copy="C6-2">领走</span></div>
+              <div class="f5__arw" aria-hidden="true"><i></i></div>
+              <div class="f5__cell"><span class="e">artifact</span><span class="c" data-copy="C6-3">登记产物</span></div>
+              <div class="f5__arw" aria-hidden="true"><i></i></div>
+              <div class="f5__cell f5__cell--done"><span class="e">done</span><span class="c" data-copy="C6-4">落账</span></div>
+              <div class="f5__arw" aria-hidden="true"><i></i></div>
+              <div class="f5__cell f5__cell--tail"><span class="e">tail</span><span class="c" data-copy="C6-5">机器贴尾行</span></div>
+            </div>
+            <div class="f5__board">
+              <span class="f5__view">board · 视图</span>
+              <p class="f5__note" data-copy="D5">↑ 视图格随时能删能重建，账本不能删</p>
+            </div>
+          </div>
+          <figcaption class="fig__cap" data-copy="E3"><b>一次入账 5 行</b>：人写 4 行、机器 1 行，五格一条流水线。口径 2026-11-05。</figcaption>
+        </figure>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">01</span><span data-copy="H3-2-1">五步，一步一行</span></h3>
+        <p class="z" data-copy="Z3">账本格式定好后，剩下的就是写几行、写点啥了。五步固定下来我就不用记流程；多数事会在账本里留下同样几条痕迹，事后能查是哪一步——也有人只写了建单和结案，中间没登。</p>
+        <p>之前写下的行一个字都不改。</p>
+
+        <!-- 主互动：账本重放（无 JS 时只留终态 + 前 5 行） -->
+        <div class="ledger" id="replay">
+          <div class="ledger__grid">
+            <div class="ledger__log">
+              <p class="ledger__bar kick"><span data-copy="F2-T">events.jsonl 只追加</span><span class="ts" id="ledger-pos">44 / 44 行</span></p>
+              <div class="ledger__body" role="region" aria-label="账本事件，可滚动" tabindex="0">
+                <ol class="evlist" id="evlist">
+                  <li class="ev" data-seq="1" data-type="new" data-task="NWK-0001"><span class="ev__s">01</span><span class="ev__ts">10-25 19:44</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">DSH 状态面板：独立 Web 页 + fnOS 桌面 …</span></li>
+                  <li class="ev" data-seq="2" data-type="new" data-task="NWK-0002"><span class="ev__s">02</span><span class="ev__ts">10-25 09:40</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0002</span><span class="ev__tx">Jnas 旁路由部署（原生 sing-box / Doc…</span></li>
+                  <li class="ev" data-seq="3" data-type="new" data-task="NWK-0003"><span class="ev__s">03</span><span class="ev__ts">10-25 10:59</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0003</span><span class="ev__tx">局域网双机 agent 互联（peer MCP / AC…</span></li>
+                  <li class="ev" data-seq="4" data-type="new" data-task="NWK-0004"><span class="ev__s">04</span><span class="ev__ts">10-17 18:18</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0004</span><span class="ev__tx">个人站开发与文案交接（小七）</span></li>
+                  <li class="ev" data-seq="5" data-type="new" data-task="NWK-0005"><span class="ev__s">05</span><span class="ev__ts">09-24 19:23</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0005</span><span class="ev__tx">Home Assistant 本地访问工具与令牌管理</span></li>
+                  <li class="ev" data-seq="6" data-type="new" data-task="NWK-0006"><span class="ev__s">06</span><span class="ev__ts">10-30 01:41</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0006</span><span class="ev__tx">澎湃 OS 独立小部件开发调研</span></li>
+                  <li class="ev" data-seq="7" data-type="new" data-task="NWK-0007"><span class="ev__s">07</span><span class="ev__ts">10-30 01:46</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0007</span><span class="ev__tx">DSH Web iPhone 移动端适配（设计→实现→复…</span></li>
+                  <li class="ev" data-seq="8" data-type="new" data-task="NWK-0008"><span class="ev__s">08</span><span class="ev__ts">09-25 11:23</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0008</span><span class="ev__tx">NAS 实例蓝色鲸鱼图标品牌区分</span></li>
+                  <li class="ev" data-seq="9" data-type="new" data-task="NWK-0009"><span class="ev__s">09</span><span class="ev__ts">10-26 02:07</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0009</span><span class="ev__tx">dsh-roleplay 局域网访问 403 修复补丁</span></li>
+                  <li class="ev" data-seq="10" data-type="new" data-task="NWK-0010"><span class="ev__s">10</span><span class="ev__ts">10-28 03:44</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0010</span><span class="ev__tx">Ark plan-api 插件安装（profile we…</span></li>
+                  <li class="ev" data-seq="11" data-type="new" data-task="NWK-0011"><span class="ev__s">11</span><span class="ev__ts">10-26 02:19</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0011</span><span class="ev__tx">dsh-roleplay 素材资产归整</span></li>
+                  <li class="ev" data-seq="12" data-type="new" data-task="NWK-0012"><span class="ev__s">12</span><span class="ev__ts">10-30 02:36</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0012</span><span class="ev__tx">NAS 与主机 dsh 任务交接方案（互传/forage…</span></li>
+                  <li class="ev" data-seq="13" data-type="new" data-task="NWK-0013"><span class="ev__s">13</span><span class="ev__ts">10-27 17:24</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0013</span><span class="ev__tx">查看 dsh 最新版与插件冲突 review</span></li>
+                  <li class="ev" data-seq="14" data-type="artifact" data-task="NWK-0001"><span class="ev__s">14</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">状态面板服务端</span></li>
+                  <li class="ev" data-seq="15" data-type="artifact" data-task="NWK-0001"><span class="ev__s">15</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">使用说明</span></li>
+                  <li class="ev" data-seq="16" data-type="done" data-task="NWK-0001"><span class="ev__s">16</span><span class="ev__ts">10-26 00:58</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">3081 面板可用；fpk 打包完成（见 deliver…</span></li>
+                  <li class="ev" data-seq="17" data-type="artifact" data-task="NWK-0002"><span class="ev__s">17</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0002</span><span class="ev__tx">旁路由一键脚本（三方案）</span></li>
+                  <li class="ev" data-seq="18" data-type="done" data-task="NWK-0002"><span class="ev__s">18</span><span class="ev__ts">10-28 21:52</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0002</span><span class="ev__tx">三方案部署指南见 旁路由部署指南.md</span></li>
+                  <li class="ev" data-seq="19" data-type="artifact" data-task="NWK-0003"><span class="ev__s">19</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0003</span><span class="ev__tx">peer 服务端</span></li>
+                  <li class="ev" data-seq="20" data-type="artifact" data-task="NWK-0003"><span class="ev__s">20</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0003</span><span class="ev__tx">MCP 桥</span></li>
+                  <li class="ev" data-seq="21" data-type="done" data-task="NWK-0003"><span class="ev__s">21</span><span class="ev__ts">10-25 19:45</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0003</span><span class="ev__tx">selftest.mjs 通过；list_peers 正…</span></li>
+                  <li class="ev" data-seq="22" data-type="artifact" data-task="NWK-0004"><span class="ev__s">22</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0004</span><span class="ev__tx">个人站主页</span></li>
+                  <li class="ev" data-seq="23" data-type="done" data-task="NWK-0004"><span class="ev__s">23</span><span class="ev__ts">10-24 21:59</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0004</span><span class="ev__tx">HANDOFF.md 交接完成</span></li>
+                  <li class="ev" data-seq="24" data-type="artifact" data-task="NWK-0005"><span class="ev__s">24</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0005</span><span class="ev__tx">HA 访问工具（令牌在 .secrets，不进账本）</span></li>
+                  <li class="ev" data-seq="25" data-type="done" data-task="NWK-0005"><span class="ev__s">25</span><span class="ev__ts">09-25 03:33</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0005</span><span class="ev__tx">ha ping 返回 HTTP 200；lights-o…</span></li>
+                  <li class="ev" data-seq="26" data-type="artifact" data-task="NWK-0006"><span class="ev__s">26</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0006</span><span class="ev__tx">资料汇编</span></li>
+                  <li class="ev" data-seq="27" data-type="done" data-task="NWK-0006"><span class="ev__s">27</span><span class="ev__ts">10-30 09:51</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0006</span><span class="ev__tx">开发规范/工具/账号指南资料齐全</span></li>
+                  <li class="ev" data-seq="28" data-type="artifact" data-task="NWK-0007"><span class="ev__s">28</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0007</span><span class="ev__tx">完整 spec</span></li>
+                  <li class="ev" data-seq="29" data-type="artifact" data-task="NWK-0007"><span class="ev__s">29</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0007</span><span class="ev__tx">设计 mockup</span></li>
+                  <li class="ev" data-seq="30" data-type="done" data-task="NWK-0007"><span class="ev__s">30</span><span class="ev__ts">10-31 02:54</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0007</span><span class="ev__tx">复盘见 dsh-iphone-retrospective…</span></li>
+                  <li class="ev" data-seq="31" data-type="artifact" data-task="NWK-0008"><span class="ev__s">31</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0008</span><span class="ev__tx">蓝色鲸鱼图标脚本</span></li>
+                  <li class="ev" data-seq="32" data-type="done" data-task="NWK-0008"><span class="ev__s">32</span><span class="ev__ts">10-25 14:13</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0008</span><span class="ev__tx">图标已改为蓝色区分</span></li>
+                  <li class="ev" data-seq="33" data-type="artifact" data-task="NWK-0009"><span class="ev__s">33</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0009</span><span class="ev__tx">403 修复补丁</span></li>
+                  <li class="ev" data-seq="34" data-type="done" data-task="NWK-0009"><span class="ev__s">34</span><span class="ev__ts">10-26 02:07</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0009</span><span class="ev__tx">局域网访问恢复正常</span></li>
+                  <li class="ev" data-seq="35" data-type="artifact" data-task="NWK-0010"><span class="ev__s">35</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0010</span><span class="ev__tx">安装记录</span></li>
+                  <li class="ev" data-seq="36" data-type="done" data-task="NWK-0010"><span class="ev__s">36</span><span class="ev__ts">10-28 03:46</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0010</span><span class="ev__tx">plan-api 插件安装成功</span></li>
+                  <li class="ev" data-seq="37" data-type="artifact" data-task="NWK-0011"><span class="ev__s">37</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--artifact">artifact</span><span class="ev__tk">NWK-0011</span><span class="ev__tx">素材资产目录</span></li>
+                  <li class="ev" data-seq="38" data-type="done" data-task="NWK-0011"><span class="ev__s">38</span><span class="ev__ts">10-26 03:11</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0011</span><span class="ev__tx">avatars/cards/images 归整完成</span></li>
+                  <li class="ev" data-seq="39" data-type="done" data-task="NWK-0012"><span class="ev__s">39</span><span class="ev__ts">10-30 02:49</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0012</span><span class="ev__tx">foragent 交接方案可行（互传目录）</span></li>
+                  <li class="ev" data-seq="40" data-type="done" data-task="NWK-0013"><span class="ev__s">40</span><span class="ev__ts">10-30 06:45</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0013</span><span class="ev__tx">冲突 review 完成，无阻断项</span></li>
+                  <li class="ev" data-seq="41" data-type="deliver" data-task="NWK-0001"><span class="ev__s">41</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--deliver">deliver</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">v1.0.1 安装包（fnOS 手动安装用）</span></li>
+                  <li class="ev" data-seq="42" data-type="done" data-task="NWK-0001"><span class="ev__s">42</span><span class="ev__ts">10-31 12:49</span><span class="ev__ty ev__ty--done">done</span><span class="ev__tk">NWK-0001</span><span class="ev__tx">补充结案：fpk 已通过 deliver --share…</span></li>
+                  <li class="ev" data-seq="43" data-type="note" data-task="NWK-0004"><span class="ev__s">43</span><span class="ev__ts">11-02 10:07</span><span class="ev__ty ev__ty--note">note</span><span class="ev__tk">NWK-0004</span><span class="ev__tx">已部署：push 至 GitHub 公开仓库 junio…</span></li>
+                  <li class="ev" data-seq="44" data-type="new" data-task="NWK-0014"><span class="ev__s">44</span><span class="ev__ts">11-02 21:49</span><span class="ev__ty ev__ty--new">new</span><span class="ev__tk">NWK-0014</span><span class="ev__tx">个人站「AI 记账员」故事页：GUIDE 分享形式改版（…</span></li>
+                </ol>
+              </div>
+            </div>
+            <div class="ledger__card" id="statecard" aria-live="polite">
+              <span class="k kick">重放到这里的账</span>
+              <div class="num"><span class="num__k" data-copy="N1">事件·本区</span><span class="num__v" data-k="events">44</span><span class="num__b num__b--indigo" aria-hidden="true"></span></div>
+              <div class="num"><span class="num__k" data-copy="N2">任务·本区</span><span class="num__v" data-k="tasks">14</span><span class="num__b num__b--teal" aria-hidden="true"></span></div>
+              <div class="num"><span class="num__k" data-copy="N3">已结案</span><span class="num__v" data-k="closed">13</span><span class="num__b num__b--teal" aria-hidden="true"></span></div>
+              <div class="num"><span class="num__k" data-copy="N4">产物·本区</span><span class="num__v" data-k="arts">14</span><span class="num__b num__b--indigo" aria-hidden="true"></span></div>
+            </div>
+          </div>
+          <div class="ledger__ctl js-only">
+            <button class="btn btn--sm" type="button" id="lplay" data-copy="F2-PLAY">播放</button>
+            <button class="btn btn--sm btn--ghost" type="button" id="lprev" aria-label="上一条" aria-describedby="step-hint">上一条</button>
+            <button class="btn btn--sm btn--ghost" type="button" id="lnext" aria-label="下一条" aria-describedby="step-hint">下一条</button>
+            <span class="sr-only" id="step-hint">走到头了就不能再往前或往后</span>
+            <span class="ledger__range">
+              <label class="ledger__pos" for="lrange">时间轴</label>
+              <input type="range" id="lrange" min="0" max="44" step="1" value="44" aria-describedby="lrange-hint">
+            </span>
+            <span class="ledger__pos" id="lrange-hint" data-copy="F2-HINT">拖到任意一条，右边的数字跟着重算</span>
+          </div>
+          <p class="fine">44 行是本区 143 条事件里的前 44 条；右侧四个数字全部由这些行走一遍算出来，不读任何存下来的状态。</p>
+        </div>
+
+        <!-- F2 事件 → 现在 -->
+        <figure class="fig" id="f2">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--void"></i>事件 · 一步一行</span>
+            <span><i class="sw sw--indigo"></i>中间这一步是动作</span>
+            <span><i class="sw sw--mustarddot"></i>状态 · 当场现算</span>
+          </p>
+          <div class="fig__body f2" role="img" aria-label="左边一列事件按顺序往下排，面板题为左记录右结论；中间是一块向右的靛色箭头形，写着把所有行重算一遍；箭头指向右边一张芥末色状态卡，卡上写 NWK-0001 现在、已结案、2 条产出 1 次交付，右上角一个小标签写着不是存的，卡下窄框里写着打开面板时重放一遍；底部一条 42 格刻度条，最后一格最高，下面标着 09-24 起、42 天、今天。">
+            <div class="f2__left">
+              <span class="f2__ttl" data-copy="C3">左记录，右结论</span>
+              <span class="f2__sub" data-copy="C3b">同一件事走过的五步</span>
+              <ol class="f2__ev">
+                <li><span class="t">10-25 19:44</span><span class="ty">new</span><span>建单</span></li>
+                <li><span class="t">10-31 12:49</span><span class="ty">artifact</span><span>登记产物</span></li>
+                <li><span class="t">10-31 12:49</span><span class="ty">artifact</span><span>登记产物</span></li>
+                <li><span class="t">10-26 00:58</span><span class="ty ty--done">done</span><span>结案</span></li>
+                <li><span class="t">10-31 12:49</span><span class="ty">deliver</span><span>交付</span></li>
+                <li><span class="t">10-31 12:49</span><span class="ty ty--done">done</span><span>补充结案</span></li>
+              </ol>
+            </div>
+            <div class="f2__mid">
+              <span class="f2__act" data-copy="D3"><b>把所有行重算一遍</b><em>replay()</em></span>
+            </div>
+            <div class="f2__right">
+              <div class="f2__card">
+                <span class="f2__notstored" aria-hidden="true"><i></i>不是存的</span>
+                <span class="k">NWK-0001 · 现在</span>
+                <span class="w">已结案</span>
+                <span class="s">2 条产出 · 1 次交付</span>
+                <span class="s">这一格是把所有行重放出来的结果</span>
+              </div>
+              <span class="f2__box" data-copy="D2">↑ 打开面板时重放一遍</span>
+            </div>
+            <div class="f2__ticks">
+              <div class="f2__bar" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i class="today"></i>
+              </div>
+              <p class="f2__scale"><span data-copy="C3c-L">09-24起</span><span data-copy="C3c-M">42 天</span><span data-copy="C3c-R">今天</span></p>
+            </div>
+          </div>
+          <figcaption class="fig__cap" data-copy="E4"><b>从左列往右卡看</b>：账本只存发生过的事，右卡是临时算的。口径 2026-11-05。</figcaption>
+        </figure>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">02</span><span data-copy="H3-2-2">看板是算出来的</span></h3>
+        <p class="z" data-copy="Z4">账本是个流水账，我真正想看的是现在啥情况。面板每次打开都拿账本重放一遍，不是另存一份复印件；静态看板不一样，它是上次 rebuild 的快照，所以会过期——过期了重跑一遍就对了。</p>
+        <div class="pair">
+          <p>归属行只代表我自称已经记过了，巡检员根本不认这行。面板也不是存下来的，得把账本从头读一遍才算得出来。</p>
+          <aside class="note note--inline">
+            <span class="note__k">口径</span>
+            <span data-copy="G2-2">事件数按账本行数算：本区 NWK 143 条，三个区合计 256 条。</span>
+          </aside>
+        </div>
+        <p>截至 2026-11-05 18:33，这个区有 143 条事件，三个区合计 256 条。账本每天都在长，我写的是发布那一刻的数。</p>
+
+        <p data-copy="D2c">状态是算出来的，不是存的。算错了重跑一遍就对；要是存错了，你连从哪儿开始错都不知道。</p>
+        <p data-copy="CH2-P4">同一份账本能出机器索引、Markdown、网页和单任务页。看板不是权威，账本才是。</p>
+        <p data-copy="CH2-P5">静态看板不会自己重算，它是上次 rebuild 时的快照——所以它会过期。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CH 03 · 日常自运转（它怎么自己转） ============ -->
+  <section class="band band--B ch--3" id="ch3" aria-labelledby="ch3-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <p class="ch__num">CH 03</p>
+          <p class="ch__q" data-copy="B1-3">平时谁来维护？</p>
+          <h2 class="ch__t" id="ch3-t" data-copy="B3-T">日常自己运转</h2>
+          <p class="lede" data-copy="B2-3">记一次不难，难的是天天记，人总会忘。所以我把这件活交给了机器。</p>
+        </header>
+
+        <!-- F3 三层台阶 -->
+        <figure class="fig" id="f3">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--sage-solid"></i>① 约定</span>
+            <span><i class="sw sw--teal"></i>② 工具</span>
+            <span><i class="sw sw--indigo"></i>③ 自动化</span>
+          </p>
+          <div class="fig__body f3" role="img" aria-label="三级台阶从左到右升高：最低一级是鼠尾草色的约定，中间是青色的工具，最高一级是靛色的自动化；台阶站在同一条 ink 基线上，级间箭头也随台阶上升。">
+            <div class="f3__row">
+              <div class="tier tier--1"><span class="k">① 约定</span><span class="n" data-copy="C4b-1">人和 Agent 的约定</span><span class="d" data-copy="F3-1B">省掉：口头交接</span></div>
+              <span class="f3__arr" style="--mb:40px"><i aria-hidden="true"></i><em data-copy="C4c-1">省掉靠记性守规矩</em></span>
+              <div class="tier tier--2"><span class="k">② 工具</span><span class="n" data-copy="C4b-2">约定变成能敲的命令</span><span class="d" data-copy="F3-2B">省掉：靠记性</span></div>
+              <span class="f3__arr" style="--mb:78px"><i aria-hidden="true"></i><em data-copy="C4c-2">省掉重复的手工操作</em></span>
+              <div class="tier tier--3"><span class="k">③ 自动化</span><span class="n" data-copy="C4b-3">04:00 替你补漏记</span><span class="d" data-copy="F3-3B">省掉：到点记得</span></div>
+            </div>
+            <p class="f3__note" data-copy="D4">一层包一层：约定在最里面，工具替人守约定，自动化替人做动作</p>
+          </div>
+          <figcaption class="fig__cap" data-copy="E5"><b>顺台阶往上走</b>：约定、工具、自动化，一层包一层。口径 2026-11-05。</figcaption>
+        </figure>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">01</span><span data-copy="H3-3-1">04:00 巡检</span></h3>
+        <p class="z" data-copy="Z5">账本要想好使，前提是得每天都有人记。要是我哪天忘了，凌晨它会自动帮我补记一次（最近一次退出码 0），我大白天只管看结果就行。</p>
+        <p>那轮有 4 个候选会话，新建或结案了 3 条任务，复扫 0 条。</p>
+
+        <!-- F4 六道筛漏斗 -->
+        <figure class="fig" id="f4">
+          <p class="legend" aria-hidden="true">
+            <span><i class="sw sw--void"></i>候选</span>
+            <span><i class="sw sw--teal"></i>入账</span>
+            <span><i class="sw sw--coralx"></i>复扫归零</span>
+            <span><i class="sw sw--sage"></i>跳过</span>
+          </p>
+          <div class="fig__body f4" id="funnel" role="img" aria-label="上下两组，中间一条粗实线隔开。上组是真实那轮：4 候选会话一条空心框占满，3 入账结案一条青色实心条，0 复扫一遍是一个小的珊瑚方块打叉，1 条跳过一条鼠尾草虚线短条。下组是演示样本、标注不是真实统计：一行 13 个小方块点阵，其中 4 个青色实心表示通过、9 个空心表示被筛，右侧写 4，下方一行字写 13 条演示、9 条被筛、4 条过筛。">
+            <div class="f4__grp">
+              <p class="f4__gt"><span data-copy="C5b-T">真实那轮 · 11-05 04:04</span><span class="f4__ts">2026-11-05 04:04:49</span></p>
+              <div class="f4__row">
+                <span class="f4__nm" data-copy="C5-1">4 候选会话</span>
+                <span class="f4__trk"><span class="f4__bar f4__bar--void"></span></span>
+                <span class="f4__num">4</span>
+              </div>
+              <div class="f4__row">
+                <span class="f4__nm" data-copy="C5-2">3 入账结案</span>
+                <span class="f4__trk"><span class="f4__bar f4__bar--75"></span></span>
+                <span class="f4__num">3</span>
+              </div>
+              <div class="f4__row">
+                <span class="f4__nm"><span data-copy="C5-3">0 · 复扫</span><span class="f4__tk" data-copy="D6">复扫归0即无漏账</span></span>
+                <span class="f4__trk"><span class="f4__zero" aria-hidden="true"></span></span>
+                <span class="f4__num">0</span>
+              </div>
+              <div class="f4__row">
+                <span class="f4__nm" data-copy="C5-4">1 条跳过</span>
+                <span class="f4__trk"><span class="f4__bar f4__bar--25"></span></span>
+                <span class="f4__num">1</span>
+              </div>
+            </div>
+            <div class="f4__demo">
+              <p class="f4__gt f4__gt--demo"><span data-copy="C5b-D">演示样本 · 不是真实统计</span><span class="f4__ts">不是真实统计</span></p>
+              <div class="f4__grid">
+                <p class="f4__dots" aria-hidden="true">
+                  <i class="dot dot--pass"></i><i class="dot dot--pass"></i><i class="dot dot--skip"></i><i class="dot dot--skip"></i>
+                  <i class="dot dot--pass"></i><i class="dot dot--skip"></i><i class="dot dot--skip"></i><i class="dot dot--skip"></i>
+                  <i class="dot dot--pass"></i><i class="dot dot--skip"></i><i class="dot dot--skip"></i><i class="dot dot--skip"></i>
+                  <i class="dot dot--skip"></i>
+                </p>
+                <span class="f4__dnum">4</span>
+              </div>
+              <p class="f4__dline"><span data-copy="C5-D1">13 条演示</span> · <span data-copy="C5b-H">9 条被筛</span> → <span data-copy="C5-D2">4 条过筛</span></p>
+            </div>
+            <div class="f4__ctl js-only">
+              <button class="toggle" type="button" id="funnel-toggle" aria-pressed="false" data-copy="F3-SW">显示演示样本（13 → 4）</button>
+            </div>
+          </div>
+          <figcaption class="fig__cap" data-copy="E6"><b>从上往下看横条</b>：六道筛逐级收窄，最后剩 4 条。口径 2026-11-05。</figcaption>
+        </figure>
+
+        <p>先让不花钱的脚本按游标挑出新会话，再让模型判断怎么记账。</p>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">02</span><span data-copy="H3-3-2">心跳不进账本</span></h3>
+        <p class="z" data-copy="Z6">定时任务要是每跑一次就往里写一行，我的账本早就被这些运行记录给淹了。现在运行状态只会覆盖一个小文件，哪个任务坏了我开工时一眼就能瞅见。</p>
+        <div class="pair">
+          <p>运行期间只写进一个心跳小文件，不进账本。</p>
+          <aside class="note note--inline">
+            <span class="note__k">快照</span>
+            <span data-copy="G3-3">2026-11-05 04:04:49 快照，原子覆写。</span>
+          </aside>
+        </div>
+
+        <div class="panel panel--ok">
+          <p class="panel__bar"><span data-copy="F6-2">state/ 里的心跳文件 · 八个键</span><span class="ts">2026-11-05 04:04:49</span></p>
+          <pre>{
+  "job": "session-ledger-sync",
+  "last_run": "2026-11-05T04:04:49+08:00",
+  "exit_code": 0,
+  "duration_s": 0,
+  "consecutive_fail": 0,
+  "last_ok": "2026-11-05T04:04:49+08:00",
+  "log": "（过程树里当日目录下的 run 日志）",
+  "note": "（本次研判摘要）"
+}</pre>
+        </div>
+
+        <p class="after-fig a-note">面板里 <code>log</code> / <code>note</code> 的值用说明文字代替，原值是过程树里的日志路径与本次研判摘要。</p>
+
+        <p class="after-fig" data-copy="CH3-P4">状态与计数键交机器判报警，时间与摘要人扫一眼；偶发报错常有，盯连续失败比单次退出码管用。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CH 04 · 盲区与局限（它会漏什么） ============ -->
+  <section class="band band--A ch--4" id="ch4" aria-labelledby="ch4-t">
+    <div class="in">
+      <div class="spine">
+
+        <header class="ch">
+          <span class="ch__bar" aria-hidden="true"></span>
+          <p class="ch__num">CH 04</p>
+          <p class="ch__q" data-copy="B1-4">它管不住什么？</p>
+          <h2 class="ch__t" id="ch4-t" data-copy="B4-T">盲区与局限</h2>
+          <p class="lede" data-copy="B2-4">机器也会挂，定好的规矩也会破。最后我给自己留了两样：一个自动检查，一份「它管不了什么」的清单。</p>
+        </header>
+
+        <!-- S1 唯一位图：看板「未结案」区裁切（宽档，全文只用一次） -->
+        <figure class="fig fig--wide" id="s1">
+          <div class="fig__body fig__body--shot">
+            <picture>
+              <source type="image/webp" srcset="assets/board-crop-720.webp 720w, assets/board-crop-1080.webp 1080w, assets/board-crop-1440.webp 1440w" sizes="(max-width: 680px) 100vw, min(1088px, 92vw)">
+              <img
+                src="assets/board-crop-1080.jpg"
+                srcset="assets/board-crop-720.jpg 720w, assets/board-crop-1080.jpg 1080w, assets/board-crop-1440.jpg 1440w"
+                sizes="(max-width: 680px) 100vw, min(1088px, 92vw)"
+                width="1440" height="556" loading="lazy" decoding="async"
+                alt="任务看板的未结案区：编号 NWK-0014、NWK-0007、NWK-0018 三张卡片，左上角统计条写着未结案 5、已结案 15、已放弃 0、任务总数 20。">
+            </picture>
+          </div>
+          <figcaption class="fig__cap" data-copy="S1-CAP">看「未结案」区：看板裁切图。快照 2026-11-05 13:53。</figcaption>
+        </figure>
+
+        <h3 class="h3"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">01</span><span data-copy="H3-4-1">六条静态检查</span></h3>
+        <p class="z" data-copy="Z7">规矩这东西写下来容易，守不住也挺容易的。所以我干脆让命令自己去检查。</p>
+        <p>我设了六条静态检查：根目录白名单、结果树禁引过程树、契约必填字段、产物存在性、脚本硬编码路径、账本禁指过程树。</p>
+
+        <div class="tblwrap">
+          <table class="tbl">
+            <caption>六条检查 · 各抓什么</caption>
+            <thead>
+              <tr><th scope="col">检查</th><th scope="col">查什么</th><th scope="col">结果</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="code">C1</td><td>根目录白名单：只准放定好的那几样</td><td><span class="st st--ok"><i aria-hidden="true"></i>过</span></td></tr>
+              <tr><td class="code">C2</td><td>结果树的文档不许指向过程树的具体文件</td><td><span class="st st--warn"><i aria-hidden="true"></i>4 条指向过程树</span></td></tr>
+              <tr><td class="code">C3</td><td>工程与作业的契约必填字段</td><td><span class="st st--ok"><i aria-hidden="true"></i>过</span></td></tr>
+              <tr><td class="code">C4</td><td>声明过的产物真的存在；取件口没有半截文件</td><td><span class="st st--ok"><i aria-hidden="true"></i>过</span></td></tr>
+              <tr><td class="code">C5</td><td>脚本没写死工作区绝对路径</td><td><span class="st st--warn"><i aria-hidden="true"></i>31 条探针</span></td></tr>
+              <tr><td class="code">C6</td><td>账本里的产物登记不许指向过程树</td><td><span class="st st--ok"><i aria-hidden="true"></i>过</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>跑 tb doctor 是 0 错误 / 35 警告：其中 4 条指向过程树的引用、31 条探针硬编码。探针只用一次，我留着这 31 条不修。</p>
+
+        <div class="panel panel--warn">
+          <p class="panel__bar"><span data-copy="F6-3">tb doctor · 尾部汇总</span><span class="ts">2026-11-05 18:33</span></p>
+          <pre>⚠ [C2] docs/gemini-web-api-review.md 引用了过程树目录
+…（C2 同类共 4 条）
+⚠ [C5] 过程树脚本写死绝对工作区路径：…/chaos-probe.mjs
+…（C5 同类共 31 条）
+（共 35 项：0 错误 / 35 警告）</pre>
+        </div>
+
+        <p class="after-fig" data-copy="CH4-P3">六条检查分头盯路径、字段与产物；抓到过引用问题的那几条算真教训，剩下几条先立着，眼下还没响过。</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ C 墨：章四结尾「边界五条」+ 页脚（全文唯一一处墨底） ============ -->
+  <section class="band band--C" id="edge" aria-labelledby="edge-t">
+    <div class="in">
+      <div class="edge spine">
+        <h3 class="h3" id="edge-t"><span class="h3__sq" aria-hidden="true"></span><span class="h3__n" aria-hidden="true">02</span><span data-copy="EDGE-H">五条边界</span></h3>
+        <ol class="edge__list">
+          <li><span class="n">01</span><span>静态检查治不了<b>语义</b>：分类错了、目标写空了，它不响。</span></li>
+          <li><span class="n">02</span><span data-copy="EDGE-4">我独自干一次性的小活，用这套不划算。</span></li>
+          <li><span class="n">03</span><span data-copy="EDGE-5">两棵树之外不能留第三处，多一处就开始漏。</span></li>
+          <li><span class="n">04</span><span data-copy="EDGE-4b">它不替我做判断，只让记录不撒谎。</span></li>
+          <li><span class="n">05</span><span data-copy="EDGE-5b">活少到一个人一个目录就能看清时，我就撤掉这套东西。</span></li>
+        </ol>
+
+        <div class="edge__dl spine">
+          <p class="dl__note" data-copy="DL-1">这份是通用指导文件，不含我这边的路径和任务号，拿去改改就能用。</p>
+          <a class="btn btn--inv" href="assets/ai-workspace-taskboard-guide.md"
+             download="通用 AI 工作区与自治任务管理机制.md">
+            <span data-copy="DL-2">下载 .md</span>
+            <span class="dl__meta">18 KB · 纯文本</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__in in">
+    <span data-copy="G4-1">© 小七</span>
+    <span data-copy="G4-2">纯静态·零构建·手写CSS</span>
+    <span><a href="#top" data-copy="G4-3">回到顶部 ↑</a></span>
+  </div>
+</footer>
+
+<script src="guide.js" defer></script>
+</body>
+</html>

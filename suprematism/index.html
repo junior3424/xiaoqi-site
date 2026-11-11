@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>马列维奇 · 至上主义 — 32 幅图录 | 小七</title>
+<meta name="description" content="马列维奇至上主义画作图录：32 幅，1915—1923。Tate 官方 1 幅 + 古根海姆官方 1 幅 + WikiArt 镜像 30 幅；作者 1935 年逝世，作品已入公有领域。">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#E3EBE7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E3EBE7'/%3E%3Crect x='6' y='6' width='14' height='14' fill='%2312241F'/%3E%3Ccircle cx='23' cy='21' r='5' fill='%23F07A5E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   至上主义图录 · 单文件样式（零 JS / 零外部依赖）
+   规则：只用直线、直角、圆；零阴影、零渐变、零圆角。
+   色板取自站点 style.css :root，不新增色值。
+   ============================================================ */
+:root{
+  --paper:#E3EBE7; --paper-2:#D2DFDA; --ink:#12241F;
+  --coral:#F07A5E; --teal:#1F6F63; --sage:#AFC6BE;
+  --ink-80:#3c4c47; --muted:#4A5F58;
+  --paper-muted:#a4afab; --paper-60:#8f9b97;
+  --line:rgba(18,36,31,.18); --line-soft:rgba(18,36,31,.10);
+  --line-paper:rgba(227,235,231,.22);
+  --f-display:"Jost","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --f-body:"Noto Sans SC","Jost","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+  --pad:clamp(20px,4.2vw,64px);
+  --max:1440px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-padding-top:24px; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:var(--teal); }
+img{ border:0; }
+
+.skip{
+  position:absolute; left:0; top:0; z-index:9;
+  display:inline-flex; align-items:center; min-height:44px;
+  padding:0 18px;
+  background:var(--ink); color:var(--paper);
+  font-family:var(--f-mono); font-size:12px;
+  transform:translateY(-130%);
+}
+.skip:focus{ transform:none; }
+
+/* ---------- 顶栏：全宽细线 + 一条走查带 ---------- */
+.top{ border-bottom:1px solid var(--line); }
+.top__in{
+  max-width:var(--max); margin:0 auto;
+  padding:0 var(--pad);
+  min-height:60px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  flex-wrap:wrap;
+}
+.back{
+  display:inline-flex; align-items:center; min-height:44px;
+  padding:0 2px;
+  font-family:var(--f-mono); font-size:12px; letter-spacing:.04em;
+  color:var(--ink); text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.back:hover,.back:focus-visible{ border-bottom-color:var(--ink); }
+.top__meta{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- 页头 ---------- */
+.head{
+  max-width:var(--max); margin:0 auto;
+  padding:clamp(28px,5vw,64px) var(--pad) clamp(20px,3vw,36px);
+}
+.eyebrow{
+  margin:0 0 clamp(14px,2vw,22px);
+  display:flex; align-items:center; gap:9px;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--muted);
+}
+.eyebrow i{ width:9px; height:9px; background:var(--coral); flex:0 0 auto; }
+.head h1{
+  margin:0;
+  font-family:var(--f-display); font-weight:600;
+  font-size:clamp(1.85rem,5.4vw,4.1rem);
+  line-height:1.06; letter-spacing:-.015em;
+}
+.head__sub{
+  margin:clamp(10px,1.6vw,16px) 0 0;
+  font-family:var(--f-mono); font-size:clamp(11px,1.4vw,13px);
+  letter-spacing:.06em; color:var(--teal);
+}
+.head__note{
+  margin:clamp(14px,2vw,20px) 0 0;
+  max-width:62ch;
+  font-size:clamp(13px,1.5vw,14.5px);
+  color:var(--ink-80);
+}
+.head__note b{ font-weight:500; color:var(--ink); }
+/* 页头装饰：方块 / 圆 / 条，全部静态几何 */
+.shapes{
+  margin:clamp(20px,3vw,30px) 0 0;
+  display:flex; align-items:flex-end; gap:clamp(12px,2vw,22px);
+  border-top:1px solid var(--line); padding-top:clamp(14px,2vw,20px);
+}
+.shapes i{ display:block; flex:0 0 auto; }
+.sh-circle{ width:clamp(22px,3.4vw,34px); height:clamp(22px,3.4vw,34px); background:var(--ink); border-radius:50%; }
+.sh-square{ width:clamp(14px,2.2vw,22px); height:clamp(14px,2.2vw,22px); background:var(--coral); }
+.sh-bar{ width:clamp(40px,9vw,110px); height:6px; background:var(--teal); }
+.sh-ring{ width:clamp(16px,2.4vw,24px); height:clamp(16px,2.4vw,24px); border:2px solid var(--ink); border-radius:50%; background:transparent; }
+.shapes span{
+  margin-left:auto; align-self:center;
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- 网格 ---------- */
+.grid-wrap{
+  max-width:var(--max); margin:0 auto;
+  padding:0 var(--pad) clamp(40px,6vw,80px);
+}
+.grid{
+  list-style:none; margin:0; padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,15.5rem),1fr));
+  gap:clamp(18px,2.4vw,34px);
+  align-items:start;
+}
+.card{ min-width:0; }
+.card__media{
+  display:block; width:100%;
+  border:1px solid var(--line);
+  background:var(--paper-2);
+  line-height:0;
+  transition:border-color .2s ease;
+}
+.card__media:hover,.card__media:focus-visible{ border-color:var(--ink); }
+.card__media img{ display:block; width:100%; height:auto; }
+.card__meta{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid var(--line-soft);
+  min-width:0;
+}
+.card__no{
+  margin:0; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.16em; color:var(--teal);
+}
+.card__zh{
+  margin:4px 0 2px;
+  font-family:var(--f-display); font-weight:600;
+  font-size:clamp(15px,1.5vw,17px); line-height:1.34;
+  overflow-wrap:anywhere;
+}
+.card__en{
+  margin:0 0 8px;
+  font-family:var(--f-mono); font-size:11px; line-height:1.5;
+  letter-spacing:.02em; color:var(--muted);
+  overflow-wrap:anywhere;
+}
+.card__fact{
+  margin:0; display:flex; gap:8px; align-items:baseline;
+  font-size:12.5px; line-height:1.55; color:var(--ink-80);
+}
+.card__fact .k{
+  flex:0 0 auto; font-family:var(--f-mono); font-size:10px;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+}
+.card__fact .v{ min-width:0; overflow-wrap:anywhere; }
+.card__src{
+  margin:6px 0 0; display:flex; align-items:center; gap:8px;
+  font-size:12.5px; color:var(--ink-80);
+}
+.card__src .k{
+  font-family:var(--f-mono); font-size:10px;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+}
+.srclink{
+  display:inline-flex; align-items:center; gap:6px;
+  min-height:44px; padding:0 10px; margin-left:-10px;
+  font-family:var(--f-mono); font-size:12px;
+  color:var(--teal); text-decoration:none;
+  border-bottom:1px solid var(--line);
+  overflow-wrap:anywhere;
+}
+.srclink:hover,.srclink:focus-visible{ border-bottom-color:var(--teal); color:var(--ink); }
+.srclink__host{ font-size:10.5px; color:var(--muted); }
+
+/* ---------- 页脚 ---------- */
+.foot{ background:var(--ink); color:var(--paper); }
+.foot__in{
+  max-width:var(--max); margin:0 auto;
+  padding:clamp(28px,4vw,48px) var(--pad);
+  display:flex; flex-wrap:wrap; gap:clamp(14px,2vw,24px);
+  align-items:flex-start; justify-content:space-between;
+}
+.foot__note{ margin:0; max-width:64ch; font-size:13px; line-height:1.7; color:rgba(227,235,231,.78); }
+.foot__meta{
+  margin:0; font-family:var(--f-mono); font-size:11px; letter-spacing:.1em;
+  color:var(--paper-muted);
+}
+.foot__meta span{ display:block; }
+.foot__meta span + span{ margin-top:6px; }
+.foot__back{
+  display:inline-flex; align-items:center; min-height:44px;
+  font-family:var(--f-mono); font-size:12px;
+  color:var(--paper); text-decoration:none;
+  border-bottom:1px solid var(--line-paper);
+}
+.foot__back:hover,.foot__back:focus-visible{ border-bottom-color:var(--paper); }
+.foot-sq{ display:inline-block; width:9px; height:9px; background:var(--coral); margin-right:8px; vertical-align:middle; }
+
+/* ---------- ≤680 ---------- */
+@media (max-width:680px){
+  .grid{ gap:20px; grid-template-columns:repeat(auto-fill,minmax(min(100%,12.5rem),1fr)); }
+  .head__note{ font-size:13px; }
+  .top__meta{ display:none; }
+  .card__zh{ font-size:15px; }
+  .foot__in{ flex-direction:column; }
+}
+/* ---------- ≤380 ---------- */
+@media (max-width:380px){
+  :root{ --pad:14px; }
+  .grid{ grid-template-columns:1fr; gap:22px; }
+  .head h1{ font-size:1.6rem; }
+  .shapes span{ display:none; }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none !important; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#grid">跳到图录</a>
+
+<header class="top">
+  <div class="top__in">
+    <a class="back" href="../index.html#index">← 回小七的站</a>
+    <span class="top__meta">Gallery Nº01 · Suprematism</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="head">
+    <p class="eyebrow"><i aria-hidden="true"></i>兴趣 07 · 至上主义画作</p>
+    <h1>马列维奇 · 至上主义</h1>
+    <p class="head__sub">Suprematism · 1915—1923 · 32 幅</p>
+    <p class="head__note">
+      溯源：<b>Tate 官方 1 幅</b> + <b>古根海姆官方 1 幅</b> + <b>WikiArt 镜像 30 幅</b>。作者 1935 年逝世，作品已入公有领域。
+      点图片在新窗口看原图，点「来源」回到馆方或镜像的作品页。
+    </p>
+    <div class="shapes" aria-hidden="true">
+      <i class="sh-circle"></i><i class="sh-square"></i><i class="sh-bar"></i><i class="sh-ring"></i>
+      <span>32 plates · 1915 / 1923</span>
+    </div>
+  </section>
+
+  <section class="grid-wrap" id="grid" tabindex="-1" aria-label="至上主义图录">
+    <ul class="grid">
+      <li class="card">
+        <a class="card__media" href="img/01_1915_black-square-1915.png" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/01_1915_black-square-1915.png" alt="黑方块（黑色至上主义方块） Black Square，1915" width="1196" height="1199" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">01</p>
+          <h2 class="card__zh">黑方块（黑色至上主义方块）</h2>
+          <p class="card__en" lang="en">Black Square</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">特列季亚科夫画廊（莫斯科）</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">1196×1199</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/black-square-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/02_1923_black-square-2nd-version-1923.png" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/02_1923_black-square-2nd-version-1923.png" alt="黑方块（第二版） Black Square (second version)，1923" width="700" height="707" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">02</p>
+          <h2 class="card__zh">黑方块（第二版）</h2>
+          <p class="card__en" lang="en">Black Square (second version)</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1923</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">700×707</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/black-square-2nd-version-1923" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/03_1915_black-square-and-red-square-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/03_1915_black-square-and-red-square-1915.jpg" alt="黑方块与红方块 Black Square and Red Square，1915" width="653" height="1039" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">03</p>
+          <h2 class="card__zh">黑方块与红方块</h2>
+          <p class="card__en" lang="en">Black Square and Red Square</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">653×1039</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/black-square-and-red-square-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/04_1915_red-square-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/04_1915_red-square-1915.jpg" alt="红方块：以二维表现的农民现实主义 Red Square (Painterly Realism of a Peasant Woman in Two Dimensions)，1915" width="817" height="818" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">04</p>
+          <h2 class="card__zh">红方块：以二维表现的农民现实主义</h2>
+          <p class="card__en" lang="en">Red Square (Painterly Realism of a Peasant Woman in Two Dimensions)</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">俄罗斯国家博物馆（圣彼得堡）</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">817×818</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/red-square-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/05_1918_white-square-1917.png" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/05_1918_white-square-1917.png" alt="至上主义构图：白上白 Suprematist Composition: White on White，1918" width="2000" height="1998" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">05</p>
+          <h2 class="card__zh">至上主义构图：白上白</h2>
+          <p class="card__en" lang="en">Suprematist Composition: White on White</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1918</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">纽约现代艺术博物馆 MoMA</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">2000×1998</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/white-square-1917" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/06_1915_four-square-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/06_1915_four-square-1915.jpg" alt="四个方块 Four Squares，1915" width="989" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">06</p>
+          <h2 class="card__zh">四个方块</h2>
+          <p class="card__en" lang="en">Four Squares</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">989×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/four-square-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/07_1915_quadrilateral-and-the-circle-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/07_1915_quadrilateral-and-the-circle-1915.jpg" alt="四边形与圆 Quadrilateral and the Circle，1915" width="696" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">07</p>
+          <h2 class="card__zh">四边形与圆</h2>
+          <p class="card__en" lang="en">Quadrilateral and the Circle</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">696×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/quadrilateral-and-the-circle-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/08_1915_square-circle-and-arrow-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/08_1915_square-circle-and-arrow-1915.jpg" alt="方块、圆与箭头 Square, Circle and Arrow，1915" width="570" height="569" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">08</p>
+          <h2 class="card__zh">方块、圆与箭头</h2>
+          <p class="card__en" lang="en">Square, Circle and Arrow</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">570×569</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/square-circle-and-arrow-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/09_1915_suprematism-with-blue-triangle-and-black-square-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/09_1915_suprematism-with-blue-triangle-and-black-square-1915.jpg" alt="带蓝色三角与黑方块的至上主义 Suprematism with Blue Triangle and Black Square，1915" width="822" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">09</p>
+          <h2 class="card__zh">带蓝色三角与黑方块的至上主义</h2>
+          <p class="card__en" lang="en">Suprematism with Blue Triangle and Black Square</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">822×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-with-blue-triangle-and-black-square-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/10_1915_suprematism-with-eight-rectangles-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/10_1915_suprematism-with-eight-rectangles-1915.jpg" alt="八个红色矩形的至上主义 Suprematism with Eight Red Rectangles，1915" width="825" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">10</p>
+          <h2 class="card__zh">八个红色矩形的至上主义</h2>
+          <p class="card__en" lang="en">Suprematism with Eight Red Rectangles</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">825×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-with-eight-rectangles-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/11_1915_suprematism-self-portrait-in-two-dimensions-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/11_1915_suprematism-self-portrait-in-two-dimensions-1915.jpg" alt="至上主义：二维自画像 Suprematism: Self-Portrait in Two Dimensions，1915" width="726" height="931" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">11</p>
+          <h2 class="card__zh">至上主义：二维自画像</h2>
+          <p class="card__en" lang="en">Suprematism: Self-Portrait in Two Dimensions</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">726×931</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-self-portrait-in-two-dimensions-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/12_1915_suprematistic-construction-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/12_1915_suprematistic-construction-1915.jpg" alt="至上主义构成 Suprematist Construction，1915" width="845" height="1216" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">12</p>
+          <h2 class="card__zh">至上主义构成</h2>
+          <p class="card__en" lang="en">Suprematist Construction</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">845×1216</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematistic-construction-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/13_1915_suprematist-composition-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/13_1915_suprematist-composition-1915.jpg" alt="至上主义构图 Suprematist Composition，1915" width="595" height="912" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">13</p>
+          <h2 class="card__zh">至上主义构图</h2>
+          <p class="card__en" lang="en">Suprematist Composition</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">私人收藏</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">595×912</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematist-composition-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/14_1915_aeroplane-flying-1915.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/14_1915_aeroplane-flying-1915.jpg" alt="至上主义构图：飞行中的飞机 Suprematist Composition: Aeroplane Flying，1915" width="741" height="875" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">14</p>
+          <h2 class="card__zh">至上主义构图：飞行中的飞机</h2>
+          <p class="card__en" lang="en">Suprematist Composition: Aeroplane Flying</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1915</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">纽约现代艺术博物馆 MoMA</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">741×875</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/aeroplane-flying-1915" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/15_1916_suprematic-painting-1916.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/15_1916_suprematic-painting-1916.jpg" alt="至上主义绘画（1916·甲） Suprematic Painting，1916" width="745" height="924" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">15</p>
+          <h2 class="card__zh">至上主义绘画（1916·甲）</h2>
+          <p class="card__en" lang="en">Suprematic Painting</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">745×924</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematic-painting-1916" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/16_1916_suprematist-painting-1916.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/16_1916_suprematist-painting-1916.jpg" alt="至上主义绘画（1916·乙） Suprematist Painting，1916" width="774" height="861" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">16</p>
+          <h2 class="card__zh">至上主义绘画（1916·乙）</h2>
+          <p class="card__en" lang="en">Suprematist Painting</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">774×861</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematist-painting-1916" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/17_1916_suprematism-1916.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/17_1916_suprematism-1916.jpg" alt="至上主义（1916·甲） Suprematism (Supremus no. 56)，1916" width="700" height="700" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">17</p>
+          <h2 class="card__zh">至上主义（1916·甲）</h2>
+          <p class="card__en" lang="en">Suprematism (Supremus no. 56)</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">700×700</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-1916" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/18_1916_suprematism-1916-1.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/18_1916_suprematism-1916-1.jpg" alt="至上主义（1916·乙） Suprematism，1916" width="1049" height="1200" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">18</p>
+          <h2 class="card__zh">至上主义（1916·乙）</h2>
+          <p class="card__en" lang="en">Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">1049×1200</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-1916-1" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/19_1916_suprematism-1916-2.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/19_1916_suprematism-1916-2.jpg" alt="至上主义（1916·丙） Suprematism，1916" width="887" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">19</p>
+          <h2 class="card__zh">至上主义（1916·丙）</h2>
+          <p class="card__en" lang="en">Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">887×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-1916-2" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/20_1917_magnetic-suprematism-1917.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/20_1917_magnetic-suprematism-1917.jpg" alt="磁性至上主义 Magnetic Suprematism，1917" width="658" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">20</p>
+          <h2 class="card__zh">磁性至上主义</h2>
+          <p class="card__en" lang="en">Magnetic Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1917</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">658×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/magnetic-suprematism-1917" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/21_1917_suprematic-elements-1917.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/21_1917_suprematic-elements-1917.jpg" alt="至上主义元素 Suprematic Elements，1917" width="664" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">21</p>
+          <h2 class="card__zh">至上主义元素</h2>
+          <p class="card__en" lang="en">Suprematic Elements</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1917</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">664×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematic-elements-1917" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/22_1917_suprematism-1917.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/22_1917_suprematism-1917.jpg" alt="至上主义（1917） Suprematism，1917" width="1000" height="999" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">22</p>
+          <h2 class="card__zh">至上主义（1917）</h2>
+          <p class="card__en" lang="en">Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1917</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">1000×999</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-1917" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/23_1917_suprematist-painting-1917.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/23_1917_suprematist-painting-1917.jpg" alt="至上主义绘画（1917） Suprematist Painting，1917" width="671" height="1010" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">23</p>
+          <h2 class="card__zh">至上主义绘画（1917）</h2>
+          <p class="card__en" lang="en">Suprematist Painting</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1917</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">671×1010</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematist-painting-1917" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/24_1918_suprematic-painting-1918.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/24_1918_suprematic-painting-1918.jpg" alt="至上主义绘画（1918） Suprematic Painting，1918" width="636" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">24</p>
+          <h2 class="card__zh">至上主义绘画（1918）</h2>
+          <p class="card__en" lang="en">Suprematic Painting</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1918</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">636×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematic-painting-1918" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/25_1918_suprematism-1918.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/25_1918_suprematism-1918.jpg" alt="至上主义（1918） Suprematism，1918" width="745" height="1000" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">25</p>
+          <h2 class="card__zh">至上主义（1918）</h2>
+          <p class="card__en" lang="en">Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1918</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">745×1000</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematism-1918" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/26_1920_movement-suprematist-square-1920.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/26_1920_movement-suprematist-square-1920.jpg" alt="至上主义方块的运动 Movement of the Suprematist Square，1920" width="613" height="631" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">26</p>
+          <h2 class="card__zh">至上主义方块的运动</h2>
+          <p class="card__en" lang="en">Movement of the Suprematist Square</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1920</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">613×631</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/movement-suprematist-square-1920" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/27_1920_renewal-suprematist-square-1920.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/27_1920_renewal-suprematist-square-1920.jpg" alt="至上主义方块的更新 Renewal of the Suprematist Square，1920" width="611" height="631" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">27</p>
+          <h2 class="card__zh">至上主义方块的更新</h2>
+          <p class="card__en" lang="en">Renewal of the Suprematist Square</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1920</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">611×631</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/renewal-suprematist-square-1920" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/28_1920_suprematic-group-1920.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/28_1920_suprematic-group-1920.jpg" alt="至上主义群组（1920） Suprematic Group，1920" width="588" height="625" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">28</p>
+          <h2 class="card__zh">至上主义群组（1920）</h2>
+          <p class="card__en" lang="en">Suprematic Group</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1920</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">588×625</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematic-group-1920" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/29_1920_suprematic-group-using-the-triangle-1920.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/29_1920_suprematic-group-using-the-triangle-1920.jpg" alt="以三角构成的至上主义群组 Suprematic Group Using the Triangle，1920" width="624" height="597" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">29</p>
+          <h2 class="card__zh">以三角构成的至上主义群组</h2>
+          <p class="card__en" lang="en">Suprematic Group Using the Triangle</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1920</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">624×597</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/suprematic-group-using-the-triangle-1920" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/30_1920_oval-rectangle-square-curve-1920.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/30_1920_oval-rectangle-square-curve-1920.jpg" alt="椭圆、矩形、方块、曲线 Oval, Rectangle, Square, Curve，1920" width="661" height="916" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">30</p>
+          <h2 class="card__zh">椭圆、矩形、方块、曲线</h2>
+          <p class="card__en" lang="en">Oval, Rectangle, Square, Curve</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1920</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">馆藏未标注</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">661×916</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.wikiart.org/en/kazimir-malevich/oval-rectangle-square-curve-1920" target="_blank" rel="noopener">WikiArt<span class="srclink__host">wikiart.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/tate_T02319_dynamic_suprematism_1916.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/tate_T02319_dynamic_suprematism_1916.jpg" alt="动态至上主义 Dynamic Suprematism，1916" width="1527" height="1536" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">31</p>
+          <h2 class="card__zh">动态至上主义</h2>
+          <p class="card__en" lang="en">Dynamic Suprematism</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">1916</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">泰特美术馆（伦敦）· 馆藏号 T02319</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">1527×1536</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.tate.org.uk/art/artworks/malevich-dynamic-suprematism-t02319" target="_blank" rel="noopener">Tate<span class="srclink__host">tate.org.uk</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <a class="card__media" href="img/gugg_PGC_untitled_1916.jpg" target="_blank" rel="noopener" title="在新窗口打开原图">
+          <img src="img/gugg_PGC_untitled_1916.jpg" alt="无题（至上主义） Untitled，馆方记录 1911（一说 1916）" width="1267" height="1280" loading="lazy" decoding="async">
+        </a>
+        <div class="card__meta">
+          <p class="card__no">32</p>
+          <h2 class="card__zh">无题（至上主义）</h2>
+          <p class="card__en" lang="en">Untitled</p>
+          <p class="card__fact"><span class="k">年代</span><span class="v">馆方记录 1911（一说 1916）</span></p>
+          <p class="card__fact"><span class="k">馆藏</span><span class="v">佩姬·古根海姆美术馆（威尼斯）· 登录号 76.2553.42</span></p>
+          <p class="card__fact"><span class="k">像素</span><span class="v">1267×1280</span></p>
+          <p class="card__src"><span class="k">来源</span>
+            <a class="srclink" href="https://www.guggenheim.org/artwork/2601" target="_blank" rel="noopener">Guggenheim<span class="srclink__host">guggenheim.org</span><span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <p class="foot__note">
+      <span class="foot-sq" aria-hidden="true"></span>图源：泰特美术馆、所罗门·R·古根海姆基金会官方页面，以及 WikiArt 镜像（镜像条目均指向原作馆藏）。
+      马列维奇 1935 年逝世，作品本身在包括中国、欧盟（life+70）在内的多数辖区已进入公有领域；数字复制件仅作研究与个人参考，二次出版请按各馆条款署明作品与馆藏号。
+    </p>
+    <p class="foot__meta">
+      <span>图录维护：2026.11</span>
+      <span>32 幅 · 零脚本 · 离线可看</span>
+    </p>
+    <a class="foot__back" href="../index.html#index">← 回小七的站</a>
+  </div>
+</footer>
+
+</body>
+</html>

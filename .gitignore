@@ -7,3 +7,11 @@ _MANIFEST.md
 Thumbs.db
 *.swp
 *.tmp
+
+# 过程文档与旧版归档：不进入公开仓库（含内部任务号、评审记录、旧版备份）
+DESIGN-SUBPAGE.md
+guide-v1-archive/
+work/dsh-status/*.md
+work/dsh-status/_shoot-eager.html
+guide/*.md
+guide/**/_MANIFEST.md
